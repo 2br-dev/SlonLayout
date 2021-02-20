@@ -5456,3 +5456,8 @@ footer {
   height: 90vh;
   background-size: cover;
   background-position: top center; }
+
+#contacts #map {
+  height: 60vh; }
+  #contacts #map .ol-overlaycontainer-stopevent {
+    display: none; }

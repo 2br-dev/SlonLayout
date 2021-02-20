@@ -1,0 +1,10 @@
+#contacts{
+
+    & #map{
+        height: 60vh;
+
+        & .ol-overlaycontainer-stopevent{
+            display: none;
+        }
+    }
+}
