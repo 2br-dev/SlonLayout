@@ -1,0 +1,123 @@
+#main{
+
+    & section{
+
+        &#hero{
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            margin-top: -96px;
+
+            @media(max-width: 600px){
+                height: 70vh;
+            }
+        }
+    
+        &#delivery{
+            background: $light-grey;
+    
+            & .lazy-image{
+                padding-top: 55%;
+                background-size: cover;
+                background-position: center;
+                border-radius: 8px;
+            }
+        }
+    
+        &#delivery-map{
+            background: radial-gradient(circle at 30vw 10%, #43A2E7, #0B314B);
+            color: #fff;
+            font-weight: 300;
+
+            & .row{
+                margin: 0;
+            }
+
+            & .map-text-wrapper{
+                margin: auto;
+            }
+    
+            & .section-header{
+                font-weight: 600;
+                font-size: 21px;
+                text-transform: uppercase;
+                margin-top: 10px;
+            }
+    
+            & .work-mode{
+                font-size: 24px;
+                line-height: 168%;
+            }
+    
+            & .lazy-image{
+                padding-top: 60%;
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        }
+
+        &#home{
+
+            & .lazy-image{
+                padding-top: 60%;
+                background-size: cover;
+                border-radius: 8px;
+            }
+        }
+
+        &#office{
+            display: flex;
+            padding: 0;
+            margin-bottom: 0;
+
+            & .office-image{
+                width: calc(50% + 200px);
+                flex-shrink: 0;
+                background-color: $light-grey;
+                background-size: cover;
+                background-position: right center;
+                background-repeat: no-repeat;
+                margin-right: -200px;
+
+            }
+            @media(max-width: 1100px){
+                flex-direction: column-reverse;
+
+                & .office-image{
+                    padding-top: 50%;
+                    margin: 0;
+                    width: 100%;
+                    background-position: top center;
+                }
+            }
+
+            & .office-text{
+                width: 50%;
+                box-sizing: border-box;
+                padding-right: calc(60% - 50vw);
+                padding-left: 40px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                background: linear-gradient(to right, rgba($light-grey, .6) 0%, $light-grey 130px);
+
+                @media(max-width: 600px){
+                    padding-left: 1rem;
+                    padding-right: 1rem;
+                }
+            }
+
+            @media(max-width: 1200px){
+
+                & .office-image{
+                    display: none;
+                }
+
+                & .office-text{
+                    width: 100%;
+                    background: $light-grey;
+                }
+            }
+        }
+    }
+}

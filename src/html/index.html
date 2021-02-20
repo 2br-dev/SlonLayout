@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('./parts/head.html', {title: "Главная"})
+</head>
+<body>
+    @@include('./parts/header.html')
+    <div class="global-wrapper" id="main">
+        <section id="hero" class="lazy-image" data-src="/img/hero-white.jpg">
+        </section>
+        <section id="water">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12">
+                        <h1>Питьевая вода</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <div class="swiper-container misc-slider">
+                            <div class="swiper-wrapper">
+                                @@loop('./parts/card.html', './data/water-main-cards.json')
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 right-align"><a href="/water.html" class="btn btn-flat">Все продукты этой категории</a></div>
+                </div>
+            </div>
+        </section>
+        <section id="delivery">
+            <div class="container">
+                <div class="row">
+                    <div class="col m6 s12">
+                        <h2>Доставка воды в Новороссийске</h2>
+                        <p>Заботитесь о своем здоровье и здоровье близких? - мы поможем Вам в этом.</p>
+                        <p>Сервис доставки питьевой воды давно уже зарекомендовал себя. Миллионы людей всего мира ощутили преимущества данной услуги, мы предлагаем сделать это и Вам.</p>
+                        <p>Мы доставим воду, поднимем на этаж и установим бутыль на кулер или поставим помпу. В нашем ассортименте: Серебряная, Мирабель, Горячий Ключ. Так же мы официальные дилеры торговых марок: Архыз, Долина Джентау (данная торговая марка представлена эксклюзивно только у нас), Горная вершина, Пилигрим, Домбай и др.</p>
+                    </div>
+                    <div class="col m6 s12">
+                        <div class="lazy-image" data-src="/img/child.jpg"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="coolers">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12">
+                        <h2>Кулеры</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <div class="swiper-container misc-slider">
+                            <div class="swiper-wrapper">
+                                @@loop('./parts/card.html', './data/cooler-main-cards.json')
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 right-align"><a href="/coolers.html" class="btn btn-flat">Все продукты этой категории</a></div>
+                </div>
+            </div>
+        </section>
+        <section id="delivery-map">
+            <div class="container">
+                <div class="row flex">
+                    <div class="col l6 m12 map-text-wrapper">
+                        <div class="row">
+                            <div class="col s12"><div class="section-header">Вы сами выбираете период доставки</div></div>
+                            <div class="col m6 s12">
+                                <ul>
+                                    <li>Принимаем заказы круглосуточно, без выходных</li>
+                                    <br>
+                                    <li>Привозим в день заказа Широкий выбор воды в крупной и мелкой таре</li>
+                                    <br>
+                                    <li>Санитарное обслуживание и ремонт кулеров</li>
+                                </ul>
+                            </div>
+                            <div class="col m6 s12">
+                                <p>Клиент при оформлении заказа может выбрать убодный интервал</p>
+                                <ul class="work-mode">
+                                    <li>09:00 - 13:00</li>
+                                    <li>14:00 - 17:00</li>
+                                    <li>18:00 - 21:00</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l6 m12">
+                        <div class="lazy-image" data-src="/img/map.png"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="pomps">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12">
+                        <h2>Помпы</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <div class="swiper-container misc-slider">
+                            <div class="swiper-wrapper">
+                                @@loop('./parts/card.html', './data/pomp-main-cards.json')
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 right-align"><a href="/pomps.html" class="btn btn-flat">Все продукты этой категории</a></div>
+                </div>
+            </div>
+        </section>
+        <div class="container">
+            <div class="col s12">
+                <div class="divider"></div>
+            </div>
+        </div>
+        <section id="home">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12">
+                        <h2>Вода на дом</h2>
+                    </div>
+                    <div class="col l6 m12 s12">
+                        <p>Современный ритм жизни ускоряется год за годом. Сегодня у людей нет времени чтоб, приготовить себе здоровую еду, не говоря уже о том, чтобы позаботиться о наличии необходимого запаса чистой и качественной питьевой водой у себя дома. И это не нужно!!! Ведь есть мы! - мы доставим воду прямо к вашему порогу в день заказа.</p>
+                        <p>Вам лишь важно помнить - что употребление в пищу чистой и качественной питьевой поможет сохранить Вам прекрасное здоровье на долгие годы. Ведь человек более чем на 70% процентов состоит из воды. Она - источник энергии и здоровья для человека. Не лучше ли заранее позаботиться о ее качестве?</p>
+                        <p>Мы доставляем воду в день заказа. Просто позвоните Нам, и в этот же день она будет у Вас.</p>
+                    </div>
+                    <div class="col l6 m12 s12">
+                        <div class="lazy-image" data-src="/img/water-glass.jpg"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="office">
+            <div class="office-image lazy-image" data-src="/img/water-office.png"></div>
+            <div class="office-text">
+                <h2>Доставка питьевой воды в офис</h2>
+                <p>Доставка воды в офис - наиболее удобный и доступный способ обеспечить всех сотрудников вашей фирмы неиссякаемым запасом энергии и жизненных сил.</p>
+                <p>Давно уже доказано, что употребление чистой, насыщенной природными минералами и микроэлементами воды помогает быть бодрым и внимательным, сохраняя высокую работоспособность в течении всего рабочего дня, потому что, большая ее часть в организме содержится в головном мозге.</p>
+                <p>Внимание руководители маленьких и больших фирм! - возьмите эту информацию на заметку. Обеспечьте, себя и своих сотрудников прекрасной природной питьевой водой, заказав ее доставку у нас.</p>
+                <p>Вся вода которую мы доставляем имеет необходимые сертификаты качества. Ее широкий ассортимент, с различным составом микроэлементов, позволит выбрать наиболее подходящую по вашему вкусу.</p>
+            </div>
+        </section>
+    </div>
+    @@include('./parts/footer.html')
+    @@include('./parts/scripts.html')
+</body>
+</html>

@@ -1,0 +1,91 @@
+body{
+    
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 300;
+    color: $text;
+    line-height: 1.6rem;
+
+    & *:focus{
+        outline: none;
+    }
+
+    & h1, & h2, & h3, a{
+        color: $secondary;
+    }
+
+    a{
+        cursor: pointer;
+        font-weight: 400;
+    }
+
+    & .btn{
+
+        &:not(.btn-flat){
+            background: $primary;
+
+            &:hover{
+                background: lighten($primary, 10);
+            }
+        }
+
+
+        &.btn-flat{
+            color: $primary;
+        }
+    }
+
+    & .misc-slider{
+        padding: 0 10px;
+        padding-bottom: 30px;
+    }
+
+    & .kv-pair{
+        display: flex;
+
+        & .key, & .value{
+            width: 30%;
+            flex-grow: 1;
+        }
+
+        &.separated{
+
+            & .key, & .value{
+                width: fit-content;
+                flex-grow: 0;
+                cursor: default;
+            }
+
+            &:hover{
+                color: $secondary;
+                font-weight: 600;
+            }
+
+            & .dotted-separator{
+                border-bottom: 1px dotted #ccc;
+                flex-grow: 1;
+                transform: translateY(-6px);
+                margin: 0 10px;
+            }
+        }
+    }
+
+    & section{
+        margin: 40px 0;
+        padding: 40px 0;
+
+        @media(max-width: 800px){
+            margin: 20px 0;
+            padding: 20px 0;
+        }
+    }
+
+    & .pagination{
+
+        & .page{
+
+            &.active{
+                background: $primary;
+            }
+        }
+    }
+}

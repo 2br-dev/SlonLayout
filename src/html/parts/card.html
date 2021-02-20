@@ -1,0 +1,59 @@
+<div class="@@wrapper">
+    <div class="card hoverable product-@@type">
+        <div class="image-holder">
+            <a href="@@link" class="lazy-image" data-src="@@image"></a>
+        </div>
+        <div class="header">@@title</div>
+        @@if(type=='water'){
+            <div class="kv-pair price">
+                <div class="key">от 4х бут.</div>
+                <div class="value">@@price4x ₽</div>
+            </div>
+            <div class="kv-pair price">
+                <div class="key">от 4х бут.</div>
+                <div class="value">@@price2x ₽</div>
+            </div>
+            <div class="kv-pair price">
+                <div class="key">от 4х бут.</div>
+                <div class="value">@@price ₽</div>
+            </div>
+            <div class="note">без стоимости тары</div>
+        }
+        @@if(type=="cooler"){
+            <div class="price">@@price ₽</div>
+            <div class="kv-pair chars">
+                <div class="key"><i data-position="right" class="tooltipped mdi mdi-select-place" data-tooltip="Тип размещения"></i></div>
+                <div class="value">@@placement</div>
+            </div>
+            <div class="kv-pair chars">
+                <div class="key"><i data-position="right" class="tooltipped mdi mdi-bottle-tonic-outline" data-tooltip="Охлаждение"></i></div>
+                <div class="value">@@cooling</div>
+            </div>
+            <div class="kv-pair chars">
+                <div class="key"><i data-position="right" class="tooltipped mdi mdi-snowflake" data-tooltip="Загрузка бутыли"></i></div>
+                <div class="value">@@loading</div>
+            </div>
+        }
+        @@if(type=="pomp"){
+            <div class="price">@@price ₽</div>
+            <div class="subheader">@@subheader</div>
+        }
+        <div class="cart-wrapper">
+            <div class="kv-pair card-footer">
+                <div class="key">
+                    @@if(type=='water'){
+                        @@include('./counter-wrapper.html')
+                    }
+                    @@if(type=='cooler'){
+                        <a class="cart-compare waves-effect waves-dark">
+                            <i class="mdi mdi-scale-balance"></i>
+                        </a>
+                    }
+                </div>
+                <div class="value right-align">
+                    <a class="btn btn-flat waves-effect waves-dark">Купить</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

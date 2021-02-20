@@ -1,0 +1,20 @@
+.breadcrumbs{
+
+    margin: 20px 0;
+    display: flex;
+
+    & .crumb{
+
+        color: $fogged;
+        
+        &:hover{
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+    }
+    
+    & .crumb-separator{
+        color: $fogged;
+        padding: 0 5px;
+    }
+}

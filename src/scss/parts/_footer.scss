@@ -1,0 +1,50 @@
+footer{
+    background: $secondary;
+    color: #fff;
+    padding-top: 20px;
+    
+    & a{
+        font-weight: 300;
+        color: #fff;
+
+        &.btn{
+            background: $primary;
+        }
+    }
+
+    & .footer-header{
+        font-size: 24px;
+        font-weight: 600;
+        margin: 10px 0;
+    }
+
+    & .footer-copyright{
+        background-color: rgba(black, .1);
+        padding: 6px 0;
+
+        & .value{
+            text-align: right;
+        }
+    }
+
+    & input, & textarea{
+        color: #fff;
+    }
+
+    & .footer-copyright{
+
+        font-size: 12px;
+
+        & .kv-pair{
+            
+            flex-wrap: wrap;
+
+            & .key, & .value{
+                @media(max-width: 600px){
+                    width: 100%;
+                    text-align: left;
+                }
+            }
+        }
+    }
+}

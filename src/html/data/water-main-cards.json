@@ -1,0 +1,82 @@
+[
+    {
+        "image": "/img/water.png",
+        "title": "Горячий ключ",
+        "type": "water",
+        "price4x": 210,
+        "price2x": 210,
+        "price": 210,
+        "wrapper": "swiper-slide",
+        "link": "/product-water.html"
+    },
+    {
+        "image": "/img/water.png",
+        "title": "Горячий ключ",
+        "type": "water",
+        "price4x": 210,
+        "price2x": 210,
+        "price": 210,
+        "wrapper": "swiper-slide",
+        "link": "/product-water.html"
+    },
+    {
+        "image": "/img/water.png",
+        "title": "Горячий ключ",
+        "type": "water",
+        "price4x": 210,
+        "price2x": 210,
+        "price": 210,
+        "wrapper": "swiper-slide",
+        "link": "/product-water.html"
+    },
+    {
+        "image": "/img/water.png",
+        "title": "Горячий ключ",
+        "type": "water",
+        "price4x": 210,
+        "price2x": 210,
+        "price": 210,
+        "wrapper": "swiper-slide",
+        "link": "/product-water.html"
+    },
+    {
+        "image": "/img/water.png",
+        "title": "Горячий ключ",
+        "type": "water",
+        "price4x": 210,
+        "price2x": 210,
+        "price": 210,
+        "wrapper": "swiper-slide",
+        "link": "/product-water.html"
+    },
+    {
+        "image": "/img/water.png",
+        "title": "Горячий ключ",
+        "type": "water",
+        "price4x": 210,
+        "price2x": 210,
+        "price": 210,
+        "wrapper": "swiper-slide",
+        "link": "/product-water.html"
+    },
+    {
+        "image": "/img/water.png",
+        "title": "Горячий ключ",
+        "type": "water",
+        "price4x": 210,
+        "price2x": 210,
+        "price": 210,
+        "wrapper": "swiper-slide",
+        "link": "/product-water.html"
+    },
+    {
+        "image": "/img/water.png",
+        "title": "Горячий ключ",
+        "type": "water",
+        "price4x": 210,
+        "price2x": 210,
+        "price": 210,
+        "wrapper": "swiper-slide",
+        "link": "/product-water.html"
+    }
+]

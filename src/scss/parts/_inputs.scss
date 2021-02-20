@@ -1,0 +1,115 @@
+.input-field{
+
+    position: relative;
+    
+    & input[type="text"],
+    & textarea
+    {
+        margin-top: 15px;
+        margin-bottom: 20px;
+        background: transparent;
+        border: 0;
+        display: block;
+        width: 100%;
+        height: 30px;
+        border-bottom: 1px solid #ccc;
+        line-height: 24px;
+
+        &::placeholder{
+            color: transparent;
+        }
+
+        & + label{
+            position: absolute;
+            left: 0;
+            z-index: 5;
+            pointer-events: none;
+            transition: font-size .2s, top .2s, opacity .2s;
+            top: 0px;
+            font-size: 16px;
+        }
+
+        &:not(:placeholder-shown), &:focus{
+
+            & + label{
+                top: -17px;
+                font-size: 10px;
+                opacity: .7;
+            }
+        }
+    }
+
+    & label{
+        user-select: none;
+    }
+
+    & input{
+        &[type="radio"]{
+            display: none;
+
+            & + label{
+
+                display: inline-block;
+                padding-left: 20px;
+                line-height: 20px;
+                position: relative;
+                cursor: pointer;
+
+                &:before{
+                    content: '';
+                    background: #eee;
+                    display: block;
+                    position: absolute;
+                    left: 0px;
+                    top: 50%;
+                    transform: translateY(calc(-1px - 50%));
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 50%;
+                    box-shadow: 0 2px 2px rgba(black, .2) inset;
+                    transition: box-shadow .3s;
+                }
+            }
+
+            &:checked + label:before{
+                box-shadow: 0 0px 0px rgba(black, 0) inset, 0 0 0 5px $primary inset;
+            }
+        }
+
+        &[type="checkbox"]{
+
+            display: none;
+
+            & + label{
+                display: inline-block;
+                padding-left: 20px;
+                line-height: 20px;
+                position: relative;
+                cursor: pointer;
+
+                &:before{
+                    content: '\F012C';
+                    font-family: 'Material Design Icons';
+                    background: #eee;
+                    display: block;
+                    position: absolute;
+                    left: 0px;
+                    top: 50%;
+                    transform: translateY(calc(-1px - 50%));
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 2px;
+                    box-shadow: 0 2px 2px rgba(black, .2) inset;
+                    transition: box-shadow .3s, color .3s;
+                    line-height: 14px;
+                    color: transparent;
+                }
+            }
+
+            &:checked + label:before{
+                color: #fff;
+                box-shadow: 0 0px 0px rgba(black, 0) inset, 0 0 0 10px $primary inset;
+            }
+        }
+    }
+}

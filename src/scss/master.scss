@@ -1,0 +1,23 @@
+// Frameworks ===================================
+@import './framework/materialize';
+@import './framework/swiper_bundle';
+
+// Global parts =================================
+@import './parts/vars';
+@import './parts/nav';
+@import './parts/helpers';
+@import './parts/card';
+@import './parts/counter';
+@import './parts/input-number';
+@import './parts/custom_grid';
+@import './parts/footer';
+@import './parts/inputs';
+@import './parts/breadcrumbs';
+@import './parts/sidenav';
+
+// Pages ========================================
+@import './pages/main';
+@import './pages/coolers';
+@import './pages/product';
+@import './pages/about';
+@import './pages/service';

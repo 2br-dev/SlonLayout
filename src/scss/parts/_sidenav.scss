@@ -1,0 +1,52 @@
+.sidenav{
+
+    & .userview{
+        padding-top: 40%;
+        background-size: cover;
+        background-position: center;
+    }
+
+    display: flex;
+    flex-direction: column;
+
+    & .separator{
+        flex-grow: 1;
+    }
+
+    & .folder{
+
+        position: relative;
+
+        &:after{
+            content: '\F0140';
+            font-family: 'Material Design Icons';
+            position: absolute;
+            right: 20px;
+            top: 0;
+        }
+
+        & + ul{
+
+            & li{
+                background: lighten($fogged, 40);
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height .3s;
+            }
+
+        }
+        &.expanded{
+
+            &:after{
+                content: '\F0143';
+            }
+
+            & + ul{
+
+                & li{
+                    max-height: 48px;
+                }
+            }
+        }
+    }
+}

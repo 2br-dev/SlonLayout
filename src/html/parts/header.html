@@ -1,0 +1,35 @@
+<header>
+    <div class="container">
+        <div class="header-wrapper">
+            <a href="/" class="logo lazy-image" data-src="/img/logo.svg"></a>
+            <nav>
+                <div class="logo-separator"></div>
+                <ul class="menu">
+                    @@include('./top-navi.html')
+                </ul>
+                <ul class="phones">
+                    @@include('./phones.html')
+                    <li data-state="logged">
+                        <a class="avatar"><i class="mdi mdi-account"></i></a>
+                        <ul class="logged-menu">
+                            <li><a class="waves-effect waves-dark">Профиль</a></li>
+                            <li><a class="waves-effect waves-dark">История заказов</a></li>
+                            <li><a class="waves-effect waves-dark">Выход</a></li>
+                        </ul>
+                        <ul class="unlogged-menu">
+                            <li><a class="waves-effect waves-dark">Авторизация</a></li>
+                            <li><a class="waves-effect waves-dark">Регистрация</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="burger-wrapper"><a href="#mobile-navi" class="burger sidenav-trigger"><i class="mdi mdi-menu"></i></a></div>
+            </nav>
+        </div>
+    </div>
+</header>
+<ul class="sidenav" id="mobile-navi">
+    <li class="userview lazy-image" data-src="/img/user-bgr.png"></li>
+    @@include('./top-navi.html')
+    <li class="separator"></li>
+    @@include('./phones.html')
+</ul>

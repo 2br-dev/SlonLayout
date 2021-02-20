@@ -1,0 +1,22 @@
+#about{
+
+    & #about-hero{
+        margin-top: -96px;
+        height: 90vh;
+        background-size: cover;
+        background-position: top center;
+        background-attachment: fixed;
+
+        @media(max-width: 600px){
+            height: 50vh;
+            background-size: auto 60vh;
+            background-attachment: scroll;
+            background-position: top center;
+        }
+    }
+
+    & .about-left{
+        padding-top: 65%;
+        background-size: cover;
+    }
+}

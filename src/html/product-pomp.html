@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('./parts/head.html', {title: "Помпа"})
+</head>
+<body>
+    @@include('./parts/header.html')
+    <div class="global-wrapper" id="product">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <h1>Помпа электронная</h1>
+                    @@include('./parts/breadcrumbs.html', {divider: "›"})
+                </div>
+            </div>
+            <div class="row">
+                <div class="col xl4 l4 m6 s12">
+                    <div class="lazy-image product-image" data-src="/img/pomp.png"></div>
+                </div>
+                <div class="col xl8 l8 m6 s12">
+                    <div class="row">
+                        <div class="col s12">
+                            <span class="product-price">1 200 ₽</span>
+                            <a class="btn waves-effect waves-light">Купить</a>
+                            <p>Перезаряжаемая аккумуляторная помпа для воды. В комплекте USB-кабель. Может заряжаться через USB-адаптер от сети или через USB-кабель от любого подходящего устройства. Полного заряда аккумулятора хватит на 4-5 бутылок 19 литров, так же можно использовать с бутылками емкостью 5 и 10 литров. Напряжение 5 В. Мощность 4 Вт. Простая установка на бутыль без снятия крышки, имеется лампочка индикации заряда.</p>
+                            <p>Чтобы налить воду, достаточно одного нажатия на кнопку. Гибкая трубка позволяет производить забор воды без остатка на дне бутыли,а при наливе Ваше напольное покрытие останется сухим. Помпа изготовлена из безопасных материалов: пластик, нержавеющая сталь. Оригинальный дизайн и разнообразие цветов впишутся в любой интерьер кухни. Приятный на ощупь пластик подарит комфорт при пользовании данным девайсом.</p>
+                            <p>Варианты цветов: белая, черная.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <div class="swiper-container misc-slider">
+                        <div class="swiper-wrapper">
+                            @@loop('./parts/card.html', './data/cooler-main-cards.json')
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @@include('./parts/footer.html')
+    @@include('./parts/scripts.html')
+</body>
+</html>
