@@ -1,12 +1,13 @@
 'use strict';
  
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var include = require('gulp-file-include');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var order = require('gulp-order');
-var browserSync = require('browser-sync').init({
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const include = require('gulp-file-include');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
+const order = require('gulp-order');
+const autoPrefixer = require('gulp-autoprefixer');
+const browserSync = require('browser-sync').init({
 	server: {
 		baseDir: './release/'
 	}
@@ -23,7 +24,10 @@ gulp.task('include', function(){
 
 gulp.task('sass', function() {
 	return gulp.src('./src/scss/**/*.scss')
-		.pipe(sass())
+		.pipe(sass({
+			// outputStyle: 'compressed'
+		}))
+		.pipe(autoPrefixer())
 		.pipe(gulp.dest('./release/css'))
 		.pipe(browserSync.stream());
 });

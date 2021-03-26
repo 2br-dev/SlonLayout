@@ -19,19 +19,19 @@
                 <div class="row">
                     <div class="col m6 s12">
                         <div class="input-field">
-                            <input type="text" class="stylized" placeholder="Имя, Фамилия">
+                            <input type="text" class="styled" placeholder="Имя, Фамилия">
                             <label>Имя, Фамилия</label>
                         </div>
                     </div>
                     <div class="col m6 s12">
                         <div class="input-field">
-                            <input type="text" class="stylized" placeholder="E-mail">
+                            <input type="text" class="styled" placeholder="E-mail">
                             <label>E-mail</label>
                         </div>
                     </div>
                     <div class="col s12">
                         <div class="input-field">
-                            <textarea class="stylized" placeholder="Текст сообщения"></textarea>
+                            <textarea class="styled" placeholder="Текст сообщения"></textarea>
                             <label>Текст сообщения</label>
                         </div>
                     </div>
@@ -72,3 +72,40 @@
         </div>
     </div>
 </footer>
+<div class="modal" id="login">
+    <div class="modal-content">
+        <div class="modal-header">Авторизация</div>
+        <div class="input-field">
+            <input placeholder="Логин" type="text" class="styled">
+            <div class="error-message">Недопустимый логин</div>
+            <label for="">Логин</label>
+        </div>
+        <div class="input-field">
+            <input placeholder="Пароль" type="password" class="styled">
+            <div class="error-message">Неверный пароль</div>
+            <label for="">Пароль</label>
+        </div>
+        <div class="extra-actions">
+            <a href="#register" class="modal-trigger">Нет аккаунта?</a>
+            <br>
+            <a href="" class="modal-trigger">Забыли пароль?</a>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a href="" class="btn btn-flat modal-close left">Закрыть</a>
+        <a href="" class="btn btn-flat modal-close">Войти</a>
+    </div>
+</div>
+<div class="modal" id="register">
+    <div class="modal-content">
+        <div class="modal-header">Регистрация</div>
+        <div class="input-field"><input placeholder="Логин" type="text" class="styled"><label for="">Логин</label></div>
+        <div class="input-field"><input placeholder="E-mail" type="text" class="styled"><label for="">E-mail</label></div>
+        <div class="input-field"><input placeholder="Пароль" type="password" class="styled"><label for="">Пароль</label></div>
+        <div class="input-field"><input placeholder="Подтверждение пароля" type="password" class="styled"><label for="">Подтверждение пароля</label></div>
+    </div>
+    <div class="modal-footer">
+        <a href="" class="btn btn-flat modal-close left">Закрыть</a>
+        <a href="" class="btn btn-flat modal-close">Войти</a>
+    </div>
+</div>

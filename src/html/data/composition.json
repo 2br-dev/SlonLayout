@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Длинное наименование продукции",
+        "count": "1",
+        "unit_price": "1 000₽",
+        "total_price": "1 000₽"
+    },
+    {
+        "name": "Вода",
+        "count": "1",
+        "unit_price": "10₽",
+        "total_price": "10₽"
+    },
+    {
+        "name": "Длинное наименование продукции",
+        "count": "1",
+        "unit_price": "1 000₽",
+        "total_price": "1 000₽"
+    },
+    {
+        "name": "Вода",
+        "count": "1",
+        "unit_price": "10₽",
+        "total_price": "10₽"
+    }
+]

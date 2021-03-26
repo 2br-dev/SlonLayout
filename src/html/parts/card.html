@@ -3,7 +3,8 @@
         <div class="image-holder">
             <a href="@@link" class="lazy-image" data-src="@@image"></a>
         </div>
-        <div class="header">@@title</div>
+        <a class="header" href="@@link">@@title</a>
+        <div class="separator"></div>
         @@if(type=='water'){
             <div class="kv-pair price">
                 <div class="key">от 4х бут.</div>
@@ -45,7 +46,7 @@
                         @@include('./counter-wrapper.html')
                     }
                     @@if(type=='cooler'){
-                        <a class="cart-compare waves-effect waves-dark">
+                        <a class="cart-button cart-compare waves-effect waves-dark">
                             <i class="mdi mdi-scale-balance"></i>
                         </a>
                     }

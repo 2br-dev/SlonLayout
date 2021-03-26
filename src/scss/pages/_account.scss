@@ -1,0 +1,136 @@
+#account{
+
+    padding-bottom: 40px;
+
+    & table{
+
+        border-spacing: 0;
+        border-collapse: collapse;
+        border-bottom: 1px solid #ddd;
+
+        & th{
+            font-size: 10px;
+            text-transform: uppercase;
+            padding: 5px;
+        }
+
+        & td, & th{
+            @media(max-width: 600px){
+
+                &.hide-on-mobile{
+                    display: none;
+                }
+            }
+        }
+
+        & tr{
+            border: 0;
+            cursor: pointer;
+            transition: background-color .4s;
+
+            & td{
+                border-top: 1px solid #ddd;
+            }
+
+            &:not(.subtable-tr):hover{
+                background: #efefef;
+            }
+        }
+    }
+
+    & .actions-wrapper{
+        position: relative;
+        text-align: right;
+        margin: 0;
+
+        & .actions-trigger{
+
+            & > a{
+                display: inline-block;
+                width: 30px;
+                text-align: center;
+            }
+        }
+
+        & .actions{
+            position: absolute;
+            top: calc(100% - 20px);
+            right: 0;
+            z-index: 20;
+            background: #fff;
+            transition: opacity .4s, top .4s;
+            opacity: 0;
+            pointer-events: none;
+            box-shadow: 0 2px 4px rgba(black, .4);
+
+            & li, & a{
+                text-align: left;
+                white-space: nowrap;
+                line-height: 40px;
+            }
+            
+            & a{
+                padding: 0 10px;
+                display: block;
+                transition: background-color .3s;
+
+                &:hover{
+                    background: #eee;
+                }
+            }
+        }
+
+        &:hover{
+
+            & .actions{
+                top: 100%;
+                opacity: 1;
+                pointer-events: all;
+            }
+        }
+    }
+
+    & table{
+        border-collapse: collapse;
+    }
+
+    & .subtable-td{
+
+        padding: 0;
+        display: none;
+
+        & .subtable-wrapper{
+            display: none;
+
+            @media(max-width: 600px){
+
+                & thead{
+                    
+                    & th:first-of-type{
+                        display: none;
+                    }
+
+                    & th{
+                        flex-grow: 1;
+                    }
+                }
+
+                & .subtable{
+
+                    & tr{
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        & td:first-of-type{
+                            width: 100%;
+                        }
+
+                        & td{
+                            flex-grow: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

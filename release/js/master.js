@@ -5639,9 +5639,9 @@ $jscomp.polyfill = function (e, r, p, m) {
 
   M.Tooltip = Tooltip;
 
-  if (M.jQueryLoaded) {
-    M.initializeJqueryWrapper(Tooltip, 'tooltip', 'M_Tooltip');
-  }
+  // if (M.jQueryLoaded) {
+  //   M.initializeJqueryWrapper(Tooltip, 'tooltip', 'M_Tooltip');
+  // }
 })(cash, M.anime);
 ; /*!
   * Waves v0.6.4
@@ -22737,9 +22737,66 @@ $(() => {
     $('body').on('change', '.filter-block input', updateFiltersHeader);
     $('body').on('click', '.sidenav .folder', toggleSidenavFolder);
     $('body').on('click', '.filters-trigger', toggleFilters);
+    $('body').on('click', '#account tr', toggleRow);
+    $('body').on('click', '.hidden-block-trigger', toggleBlock);
+    $('body').on('change', '[name="del"]', updateAddressList);
+    $('body').on('change', '[name="addr"]', updateAddressField);
+
 });
 
+//= Переключение доп.адреса =============================================
+function updateAddressField(e){
+	if($(this).val() == 'user-address'){
+		$('#user-address').removeClass('hidden');
+	}else{
+		$('#user-address').addClass('hidden');
+	}
+}
+
+//= Переключение блока адресов ===========================================
+function updateAddressList(e){
+	if($(this).hasClass('need-address')){
+		$('.address-list').removeClass('hidden');
+	}else{
+		$('.address-list').addClass('hidden');
+	}
+}
+
+//= Переключение скрытых блоков ===========================================
+function toggleBlock(e){
+    
+    var cssClass = $(this).prop('checked') ? '' : 'hidden';
+    $(this).parent().next().removeClass('hidden').addClass(cssClass);
+}
+
 //= Переключение видимости фильтров в мобильной адаптации==================
+function toggleRow(e){
+
+
+    // Проверка на клик по ссылке
+    if(!e.originalEvent){
+        return;
+    }
+
+    var path = e.originalEvent.path;
+    var link = $(path).filter((index, el) => {
+        return el.tagName === 'A';
+    });
+
+    if(!link.length){
+
+        var already = !$(this).next().css('display') == 'none';
+    
+        $('.subtable-td, .subtable-wrapper').slideUp('fast');
+    
+        var detailsRow = $(this).next();
+        if(!already){
+            detailsRow.find('.subtable-td').css('display', 'table-cell').find('.subtable-wrapper').slideDown('fast');
+        }
+    }
+}
+
+//= Отображение фильтров
 function toggleFilters(e){
     e.preventDefault();
     $('.filter-block').toggleClass('shown');
@@ -22801,7 +22858,7 @@ function consoleForm(){
 
 //= Установка фона навигационной панели ===================================
 function setNavbarBackground(){
-    if($('html, body').scrollTop() >= 100){
+    if($('html, body').scrollTop() >= 50){
         $('header').addClass('scrolled');
     }else{
         $('header').removeClass('scrolled');
@@ -22820,16 +22877,26 @@ function restoreDataImage(){
     })
 }
 
+//= Инициализация тултипов
+function initTooltip(){
+    var elems = document.querySelectorAll('.tooltipped');
+    var instances = M.Tooltip.init(elems, {});
+}
+
 //= Общая инициализация ===================================================
 function init(){
     $('.lazy-image').lazy();
-    $('.tooltipped').tooltip();
+    initTooltip();
     $('.sidenav').sidenav();
+    $('.modal').modal();
+
     $('.materialboxed').materialbox({
         onOpenStart: storeDataImage,
         onCloseEnd: restoreDataImage
     });
+
     setNavbarBackground();
+    $('.tabs').tabs();
 
     miscSliders = new Swiper('.misc-slider', {
         loop: true,
@@ -22849,11 +22916,14 @@ function init(){
             }
         }
     });
+
     $(miscSliders).each((index, swiper) => {
         swiper.on('slideChange', () => {
             $('.lazy-image').lazy();
+            initTooltip();
         })
     });
+
     $('textarea').each(function () {
         this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;');
     }).on('input', function () {

@@ -1,0 +1,31 @@
+[
+    {
+        "id": 1,
+        "label": "Самовывоз",
+        "checked": "checked",
+        "extraClass": "need-address",
+        "prefix": "del"
+    },
+    {
+        "id": 2,
+        "label": "CDEK",
+        "checked": "",
+        "extraClass": "",
+        "prefix": "del"
+    },
+    {
+        "id": 3,
+        "label": "Транспортная компания до терминала",
+        "checked": "",
+        "extraClass": "need-address",
+        "prefix": "del"
+    },
+    {
+        "id": 4,
+        "label": "Курьер",
+        "checked": "",
+        "extraClass": "",
+        "prefix": "del"
+    }
+    
+]

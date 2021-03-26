@@ -4767,9 +4767,9 @@ $jscomp.polyfill = function (e, r, p, m) {
 
   M.Tooltip = Tooltip;
 
-  if (M.jQueryLoaded) {
-    M.initializeJqueryWrapper(Tooltip, 'tooltip', 'M_Tooltip');
-  }
+  // if (M.jQueryLoaded) {
+  //   M.initializeJqueryWrapper(Tooltip, 'tooltip', 'M_Tooltip');
+  // }
 })(cash, M.anime);
 ; /*!
   * Waves v0.6.4

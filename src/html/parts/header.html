@@ -5,20 +5,37 @@
             <nav>
                 <div class="logo-separator"></div>
                 <ul class="menu">
-                    @@include('./top-navi.html')
+                    @@include('./top-navi.html', {clear: ''})
                 </ul>
                 <ul class="phones">
                     @@include('./phones.html')
-                    <li data-state="logged">
-                        <a class="avatar"><i class="mdi mdi-account"></i></a>
+                </ul>
+                <ul class="icons">
+                    <li class="nav-icon">
+                        <a href="/checkout.html" class="avatar">
+                            <i class="mdi mdi-cart"></i>
+                            <span>Корзина</span>
+                        </a>
+                    </li>
+                    <li class="nav-icon">
+                        <a href="/compare.html" class="avatar">
+                            <i class="mdi mdi-scale-balance"></i>
+                            <span>Сравнение</span>
+                        </a>
+                    </li>
+                    <li data-state="unlogged" class="nav-icon">
+                        <a class="avatar">
+                            <i class="mdi mdi-account"></i>
+                            <span class="logged-sign">Профиль</span>
+                            <span class="unlogged-sign">Вход</span>
+                        </a>
                         <ul class="logged-menu">
-                            <li><a class="waves-effect waves-dark">Профиль</a></li>
-                            <li><a class="waves-effect waves-dark">История заказов</a></li>
-                            <li><a class="waves-effect waves-dark">Выход</a></li>
+                            <li><a href="/account.html" class="clear waves-effect waves-dark">Профиль</a></li>
+                            <li><a class="clear waves-effect waves-dark">Выход</a></li>
                         </ul>
                         <ul class="unlogged-menu">
-                            <li><a class="waves-effect waves-dark">Авторизация</a></li>
-                            <li><a class="waves-effect waves-dark">Регистрация</a></li>
+                            <li><a href="#login" class="clear waves-effect waves-dark modal-trigger">Авторизация</a></li>
+                            <li><a href="#register" class="clear waves-effect waves-dark modal-trigger">Регистрация</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -29,7 +46,7 @@
 </header>
 <ul class="sidenav" id="mobile-navi">
     <li class="userview lazy-image" data-src="/img/user-bgr.png"></li>
-    @@include('./top-navi.html')
+    @@include('./top-navi.html', {clear: 'clear'})
     <li class="separator"></li>
     @@include('./phones.html')
 </ul>

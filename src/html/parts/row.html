@@ -1,0 +1,41 @@
+<tr>
+    <td>@@id</td>
+    <td>@@date</td>
+    <td>@@summ</td>
+    <td class="hide-on-mobile">@@state</td>
+    <td>
+        <a href="@@docs"><i class="mdi mdi-file"></i></a>
+    </td>
+    <td class="hide-on-mobile">@@payment_type</td>
+    <td class="hide-on-mobile">@@delivery_type</td>
+    <td>
+        <ul class="actions-wrapper">
+            <li class="actions-trigger">
+                <a><i class="mdi mdi-dots-vertical"></i></a>
+                <ul class="actions">
+                    <li><a href="">Отменить</a></li>
+                    <li><a href="">Изменить оплату</a></li>
+                    <li><a href="">Оплатить</a></li>
+                    <li><a href="">Повторить</a></li>
+                </ul>
+            </li>
+        </ul>
+    </td>
+</tr>
+<tr class="subtable-tr">
+    <td colspan="8" class="subtable-td">
+        <div class="subtable-wrapper">
+            <table class="subtable">
+                <thead>
+                    <th>Наименование</th>
+                    <th>Кол-во</th>
+                    <th>Цена/ед</th>
+                    <th>Общая цена</th>
+                </thead>
+                <tbody>
+                    @@loop('./subrow.html', "./data/composition.json")
+                </tbody>
+            </table>
+        </div>
+    </td>
+</tr>

@@ -14,6 +14,7 @@
 @import './parts/inputs';
 @import './parts/breadcrumbs';
 @import './parts/sidenav';
+@import './parts/modals';
 
 // Pages ========================================
 @import './pages/main';
@@ -22,3 +23,6 @@
 @import './pages/about';
 @import './pages/service';
 @import './pages/contacts';
+@import './pages/account';
+@import './pages/checkout';
+@import './pages/compare';

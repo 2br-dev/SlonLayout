@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+<link rel="stylesheet" href="/css/master.css">
+<title>ООО «Слон» || Главная</title>
+</head>
+<body>
+    <header>
+    <div class="container">
+        <div class="header-wrapper">
+            <a href="/" class="logo lazy-image" data-src="/img/logo.svg"></a>
+            <nav>
+                <div class="logo-separator"></div>
+                <ul class="menu">
+                    <li><a class="" href="/about.html">О компании</a></li>
+<li>
+    <a class="folder ">Каталог</a>
+    <ul>
+        <li><a class="clear" href="/water.html">Вода</a></li>
+        <li><a class="clear" href="/coolers.html">Кулеры</a></li>
+        <li><a class="clear" href="/pomps.html">Помпы</a></li>
+    </ul>
+</li>
+<li><a class="" href="/service.html">Сервис кулеров</a></li>
+<li><a class="" href="/contacts.html">Контакты</a></li>
+                </ul>
+                <ul class="phones">
+                    <li>
+    <a href="">8 (8617) 211-731</a>
+</li>
+<li>
+    <a href="">8 (988) 769-7744</a>
+</li>
+                </ul>
+                <ul class="icons">
+                    <li class="nav-icon">
+                        <a href="/checkout.html" class="avatar">
+                            <i class="mdi mdi-cart"></i>
+                            <span>Корзина</span>
+                        </a>
+                    </li>
+                    <li class="nav-icon">
+                        <a href="/compare.html" class="avatar">
+                            <i class="mdi mdi-scale-balance"></i>
+                            <span>Сравнение</span>
+                        </a>
+                    </li>
+                    <li data-state="unlogged" class="nav-icon">
+                        <a class="avatar">
+                            <i class="mdi mdi-account"></i>
+                            <span class="logged-sign">Профиль</span>
+                            <span class="unlogged-sign">Вход</span>
+                        </a>
+                        <ul class="logged-menu">
+                            <li><a href="/account.html" class="clear waves-effect waves-dark">Профиль</a></li>
+                            <li><a class="clear waves-effect waves-dark">Выход</a></li>
+                        </ul>
+                        <ul class="unlogged-menu">
+                            <li><a href="#login" class="clear waves-effect waves-dark modal-trigger">Авторизация</a></li>
+                            <li><a href="#register" class="clear waves-effect waves-dark modal-trigger">Регистрация</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="burger-wrapper"><a href="#mobile-navi" class="burger sidenav-trigger"><i class="mdi mdi-menu"></i></a></div>
+            </nav>
+        </div>
+    </div>
+</header>
+<ul class="sidenav" id="mobile-navi">
+    <li class="userview lazy-image" data-src="/img/user-bgr.png"></li>
+    <li><a class="clear" href="/about.html">О компании</a></li>
+<li>
+    <a class="folder clear">Каталог</a>
+    <ul>
+        <li><a class="clear" href="/water.html">Вода</a></li>
+        <li><a class="clear" href="/coolers.html">Кулеры</a></li>
+        <li><a class="clear" href="/pomps.html">Помпы</a></li>
+    </ul>
+</li>
+<li><a class="clear" href="/service.html">Сервис кулеров</a></li>
+<li><a class="clear" href="/contacts.html">Контакты</a></li>
+    <li class="separator"></li>
+    <li>
+    <a href="">8 (8617) 211-731</a>
+</li>
+<li>
+    <a href="">8 (988) 769-7744</a>
+</li>
+</ul>
+    <div class="global-wrapper" id="account">
+        <div class="container">
+            <ul class="tabs">
+                <li class="tab"><a href="#profile">Профиль</a></li>
+                <li class="tab"><a href="#history">История заказов</a></li>
+            </ul>
+            <div id="profile">
+                <form action="" id="profile">
+    <div class="row">
+        <div class="col l4 offset-l4 m6 offset-m3 s12">
+            <div class="input-field"><input placeholder="Имя" class="styled" type="text"><label for="">Имя</label></div>
+            <div class="input-field"><input placeholder="Фамилия" class="styled" type="text"><label for="">Фамилия</label></div>
+            <div class="input-field"><input placeholder="Email" class="styled" type="text"><label for="">Email</label></div>
+            <div class="input-field"><input placeholder="Телефон" class="styled" type="text"><label for="">Телефон</label></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col l4 offset-l4 m6 offset-m3 s12">
+            <div class="cheсk-wrapper"><input type="checkbox" id="change-password" class="hidden-block-trigger"><label for="change-password">Изменить пароль</label></div>
+            <div class="change-password-wrapper hidden">
+                <div class="input-field"><input placeholder="Старый пароль" class="styled" type="text"><label for="">Старый пароль</label></div>
+                <div class="input-field"><input placeholder="Новый пароль" class="styled" type="text"><label for="">Новый пароль</label></div>
+                <div class="input-field"><input placeholder="Подтвердить пароль" class="styled" type="text"><label for="">Подтвердить пароль</label></div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col l4 offset-l4 m6 offset-m3 s12">
+            <div class="cheсk-wrapper"><input type="checkbox" id="law-face" class="hidden-block-trigger"><label for="law-face">Юр. лицо</label></div>
+            <div class="law-face-wrapper hidden">
+                <div class="input-field"><input class="styled" placeholder="Наименование организации" type="text"><label for="">Наименование организации</label></div>
+                <div class="input-field"><input class="styled" placeholder="Номер налогоплательщика (ИНН)" type="text"><label for="">Номер налогоплательщика (ИНН)</label></div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col l4 offset-l4 m6 offset-m3 s12">
+            <a href="" class="btn">Сохранить</a>
+            <a href="" class="btn">Сбросить</a>
+        </div>
+    </div>
+</form>
+            </div>
+            <div id="history">
+                <table class="history">
+    <thead>
+        <th>№</th>
+        <th>Дата</th>
+        <th>Сумма</th>
+        <th class="hide-on-mobile">Статус</th>
+        <th>Счет</th>
+        <th class="hide-on-mobile">Оплата</th>
+        <th class="hide-on-mobile">Доставка</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr>
+    <td>1</td>
+    <td>23.02.2020</td>
+    <td>1 200₽</td>
+    <td class="hide-on-mobile">Обрабатывается</td>
+    <td>
+        <a href="https://docs.google.com/spreadsheets/d/129f3lrKgdAE5NQOGxR0eSC7DnztZYuy56uOExpeweH0/edit#gid=712599601"><i class="mdi mdi-file"></i></a>
+    </td>
+    <td class="hide-on-mobile">Онлайн</td>
+    <td class="hide-on-mobile">Курьером</td>
+    <td>
+        <ul class="actions-wrapper">
+            <li class="actions-trigger">
+                <a><i class="mdi mdi-dots-vertical"></i></a>
+                <ul class="actions">
+                    <li><a href="">Отменить</a></li>
+                    <li><a href="">Изменить оплату</a></li>
+                    <li><a href="">Оплатить</a></li>
+                    <li><a href="">Повторить</a></li>
+                </ul>
+            </li>
+        </ul>
+    </td>
+</tr>
+<tr class="subtable-tr">
+    <td colspan="8" class="subtable-td">
+        <div class="subtable-wrapper">
+            <table class="subtable">
+                <thead>
+                    <th>Наименование</th>
+                    <th>Кол-во</th>
+                    <th>Цена/ед</th>
+                    <th>Общая цена</th>
+                </thead>
+                <tbody>
+                    <tr>
+    <td>Длинное наименование продукции</td>
+    <td>1</td>
+    <td>1 000₽</td>
+    <td>1 000₽</td>
+</tr><tr>
+    <td>Вода</td>
+    <td>1</td>
+    <td>10₽</td>
+    <td>10₽</td>
+</tr><tr>
+    <td>Длинное наименование продукции</td>
+    <td>1</td>
+    <td>1 000₽</td>
+    <td>1 000₽</td>
+</tr><tr>
+    <td>Вода</td>
+    <td>1</td>
+    <td>10₽</td>
+    <td>10₽</td>
+</tr>
+                </tbody>
+            </table>
+        </div>
+    </td>
+</tr><tr>
+    <td>2</td>
+    <td>23.02.2020</td>
+    <td>1 200₽</td>
+    <td class="hide-on-mobile">Обрабатывается</td>
+    <td>
+        <a href="https://docs.google.com/spreadsheets/d/129f3lrKgdAE5NQOGxR0eSC7DnztZYuy56uOExpeweH0/edit#gid=712599601"><i class="mdi mdi-file"></i></a>
+    </td>
+    <td class="hide-on-mobile">Онлайн</td>
+    <td class="hide-on-mobile">Курьером</td>
+    <td>
+        <ul class="actions-wrapper">
+            <li class="actions-trigger">
+                <a><i class="mdi mdi-dots-vertical"></i></a>
+                <ul class="actions">
+                    <li><a href="">Отменить</a></li>
+                    <li><a href="">Изменить оплату</a></li>
+                    <li><a href="">Оплатить</a></li>
+                    <li><a href="">Повторить</a></li>
+                </ul>
+            </li>
+        </ul>
+    </td>
+</tr>
+<tr class="subtable-tr">
+    <td colspan="8" class="subtable-td">
+        <div class="subtable-wrapper">
+            <table class="subtable">
+                <thead>
+                    <th>Наименование</th>
+                    <th>Кол-во</th>
+                    <th>Цена/ед</th>
+                    <th>Общая цена</th>
+                </thead>
+                <tbody>
+                    <tr>
+    <td>Длинное наименование продукции</td>
+    <td>1</td>
+    <td>1 000₽</td>
+    <td>1 000₽</td>
+</tr><tr>
+    <td>Вода</td>
+    <td>1</td>
+    <td>10₽</td>
+    <td>10₽</td>
+</tr><tr>
+    <td>Длинное наименование продукции</td>
+    <td>1</td>
+    <td>1 000₽</td>
+    <td>1 000₽</td>
+</tr><tr>
+    <td>Вода</td>
+    <td>1</td>
+    <td>10₽</td>
+    <td>10₽</td>
+</tr>
+                </tbody>
+            </table>
+        </div>
+    </td>
+</tr><tr>
+    <td>3</td>
+    <td>23.02.2020</td>
+    <td>1 200₽</td>
+    <td class="hide-on-mobile">Обрабатывается</td>
+    <td>
+        <a href="https://docs.google.com/spreadsheets/d/129f3lrKgdAE5NQOGxR0eSC7DnztZYuy56uOExpeweH0/edit#gid=712599601"><i class="mdi mdi-file"></i></a>
+    </td>
+    <td class="hide-on-mobile">Онлайн</td>
+    <td class="hide-on-mobile">Курьером</td>
+    <td>
+        <ul class="actions-wrapper">
+            <li class="actions-trigger">
+                <a><i class="mdi mdi-dots-vertical"></i></a>
+                <ul class="actions">
+                    <li><a href="">Отменить</a></li>
+                    <li><a href="">Изменить оплату</a></li>
+                    <li><a href="">Оплатить</a></li>
+                    <li><a href="">Повторить</a></li>
+                </ul>
+            </li>
+        </ul>
+    </td>
+</tr>
+<tr class="subtable-tr">
+    <td colspan="8" class="subtable-td">
+        <div class="subtable-wrapper">
+            <table class="subtable">
+                <thead>
+                    <th>Наименование</th>
+                    <th>Кол-во</th>
+                    <th>Цена/ед</th>
+                    <th>Общая цена</th>
+                </thead>
+                <tbody>
+                    <tr>
+    <td>Длинное наименование продукции</td>
+    <td>1</td>
+    <td>1 000₽</td>
+    <td>1 000₽</td>
+</tr><tr>
+    <td>Вода</td>
+    <td>1</td>
+    <td>10₽</td>
+    <td>10₽</td>
+</tr><tr>
+    <td>Длинное наименование продукции</td>
+    <td>1</td>
+    <td>1 000₽</td>
+    <td>1 000₽</td>
+</tr><tr>
+    <td>Вода</td>
+    <td>1</td>
+    <td>10₽</td>
+    <td>10₽</td>
+</tr>
+                </tbody>
+            </table>
+        </div>
+    </td>
+</tr><tr>
+    <td>4</td>
+    <td>23.02.2020</td>
+    <td>1 200₽</td>
+    <td class="hide-on-mobile">Обрабатывается</td>
+    <td>
+        <a href="https://docs.google.com/spreadsheets/d/129f3lrKgdAE5NQOGxR0eSC7DnztZYuy56uOExpeweH0/edit#gid=712599601"><i class="mdi mdi-file"></i></a>
+    </td>
+    <td class="hide-on-mobile">Онлайн</td>
+    <td class="hide-on-mobile">Курьером</td>
+    <td>
+        <ul class="actions-wrapper">
+            <li class="actions-trigger">
+                <a><i class="mdi mdi-dots-vertical"></i></a>
+                <ul class="actions">
+                    <li><a href="">Отменить</a></li>
+                    <li><a href="">Изменить оплату</a></li>
+                    <li><a href="">Оплатить</a></li>
+                    <li><a href="">Повторить</a></li>
+                </ul>
+            </li>
+        </ul>
+    </td>
+</tr>
+<tr class="subtable-tr">
+    <td colspan="8" class="subtable-td">
+        <div class="subtable-wrapper">
+            <table class="subtable">
+                <thead>
+                    <th>Наименование</th>
+                    <th>Кол-во</th>
+                    <th>Цена/ед</th>
+                    <th>Общая цена</th>
+                </thead>
+                <tbody>
+                    <tr>
+    <td>Длинное наименование продукции</td>
+    <td>1</td>
+    <td>1 000₽</td>
+    <td>1 000₽</td>
+</tr><tr>
+    <td>Вода</td>
+    <td>1</td>
+    <td>10₽</td>
+    <td>10₽</td>
+</tr><tr>
+    <td>Длинное наименование продукции</td>
+    <td>1</td>
+    <td>1 000₽</td>
+    <td>1 000₽</td>
+</tr><tr>
+    <td>Вода</td>
+    <td>1</td>
+    <td>10₽</td>
+    <td>10₽</td>
+</tr>
+                </tbody>
+            </table>
+        </div>
+    </td>
+</tr>
+    </tbody>
+</table>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <div class="row">
+            <div class="col m2 s5 xs12">
+                <div class="footer-header">Навигация</div>
+                <ul>
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="/about.html">О компании</a></li>
+                    <li><a href="/water.html">Питьевая вода</a></li>
+                    <li><a href="/pomps.html">Помпы</a></li>
+                    <li><a href="/coolers.html">Кулеры</a></li>
+                    <li><a href="/service.html">Сервис кулеров</a></li>
+                    <li><a href="/delivery.html">Доставка</a></li>
+                    <li><a href="/contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="col l4 m5 s7 xs12">
+                <div class="footer-header">Обратная связь</div>
+                <div class="row">
+                    <div class="col m6 s12">
+                        <div class="input-field">
+                            <input type="text" class="styled" placeholder="Имя, Фамилия">
+                            <label>Имя, Фамилия</label>
+                        </div>
+                    </div>
+                    <div class="col m6 s12">
+                        <div class="input-field">
+                            <input type="text" class="styled" placeholder="E-mail">
+                            <label>E-mail</label>
+                        </div>
+                    </div>
+                    <div class="col s12">
+                        <div class="input-field">
+                            <textarea class="styled" placeholder="Текст сообщения"></textarea>
+                            <label>Текст сообщения</label>
+                        </div>
+                    </div>
+                    <div class="col s12 right-align">
+                        <a class="btn">Отправить</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col m5 offset-l1 offset-m0 s12 xs12">
+                <div class="footer-header">Контакты</div>
+                <ul>
+                    <li>г. Новроссийск, ул. Луначарского, 28 Д</li>
+                    <li>E-mail: slon.voda@yandex.ru</li>
+                </ul>
+                <div class="row">
+                    <div class="col m6 s6 xs12">
+                        <ul>
+                            <li><a href="">8 (8617) 211-731</a></li>
+                            <li><a href="">8 (8617) 211-783</a></li>
+                        </ul>
+                    </div>
+                    <div class="col m6 s6 xs12">
+                        <ul>
+                            <li><a href="">8 (988) 769-77-44</a></li>
+                            <li><a href="">8 (988) 765-77-44</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            <div class="kv-pair">
+                <div class="key">© Слон, 2021</div>
+                <div class="value"><a href="">Политика конфиденциальности</a></div>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="modal" id="login">
+    <div class="modal-content">
+        <div class="modal-header">Авторизация</div>
+        <div class="input-field">
+            <input placeholder="Логин" type="text" class="styled">
+            <div class="error-message">Недопустимый логин</div>
+            <label for="">Логин</label>
+        </div>
+        <div class="input-field">
+            <input placeholder="Пароль" type="password" class="styled">
+            <div class="error-message">Неверный пароль</div>
+            <label for="">Пароль</label>
+        </div>
+        <div class="extra-actions">
+            <a href="#register" class="modal-trigger">Нет аккаунта?</a>
+            <br>
+            <a href="" class="modal-trigger">Забыли пароль?</a>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a href="" class="btn btn-flat modal-close left">Закрыть</a>
+        <a href="" class="btn btn-flat modal-close">Войти</a>
+    </div>
+</div>
+<div class="modal" id="register">
+    <div class="modal-content">
+        <div class="modal-header">Регистрация</div>
+        <div class="input-field"><input placeholder="Логин" type="text" class="styled"><label for="">Логин</label></div>
+        <div class="input-field"><input placeholder="E-mail" type="text" class="styled"><label for="">E-mail</label></div>
+        <div class="input-field"><input placeholder="Пароль" type="password" class="styled"><label for="">Пароль</label></div>
+        <div class="input-field"><input placeholder="Подтверждение пароля" type="password" class="styled"><label for="">Подтверждение пароля</label></div>
+    </div>
+    <div class="modal-footer">
+        <a href="" class="btn btn-flat modal-close left">Закрыть</a>
+        <a href="" class="btn btn-flat modal-close">Войти</a>
+    </div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="/js/master.js"></script>
+</body>
+</html>

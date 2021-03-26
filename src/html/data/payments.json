@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "checked": "checked",
+        "extraClass": "",
+        "label": "Наличными курьеру",
+        "prefix": "paymnt"
+    },
+    {
+        "id":2,
+        "checked": "checked",
+        "extraClass": "",
+        "label": "Картой онлайн",
+        "prefix": "paymnt"
+    },
+    {
+        "id": 3,
+        "checked": "checked",
+        "extraClass": "",
+        "label": "оплата по счету",
+        "prefix": "paymnt"
+    }
+]

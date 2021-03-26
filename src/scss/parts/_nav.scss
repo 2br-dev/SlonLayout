@@ -1,5 +1,9 @@
 header{
-
+    position: sticky;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
     position: sticky;
     top: 0;
     z-index: 20;
@@ -43,6 +47,15 @@ header{
 
             & > ul{
                 display: flex;
+                
+                @media(min-width: 900px){
+                    margin: 0;
+                }
+
+                & a{
+                    line-height: 43px;
+                    display: inline-block;
+                }
 
                 &.menu{
                     flex-grow: 1;
@@ -82,25 +95,66 @@ header{
                         padding-top: 0px;
                     }
 
-                    & [data-state="logged"]{
+                    @media(max-width: 700px){
+                        display: none;
+                    }
+                }
 
-                        & .unlogged-menu{
-                            display: none;
+                & .nav-icon{
+
+                    text-align: center;
+                    margin: 0 2px;
+
+                    padding-top: 36px;
+                    color: $secondary;
+
+                    @media(max-width: 900px){
+                        padding-top: 0px;
+                    }
+
+                    @media(max-width: 600px){
+                        margin-top: 0px;
+                    }
+                    
+                    @media(max-width: 400px){
+                        
+                        margin-top: 0px;
+                        & span{
+                            display: none !important;
                         }
                     }
 
+                    &:first-of-type{
+                        margin-left: 20px;
+                    }
+                    
+                    &:before, &:after{
+                        display: none !important;
+                    }
+                    
                     & .avatar{
-                        border: 1px solid $secondary;
                         display: inline-block;
-                        width: 26px;
-                        height: 26px;
-                        border-radius: 50%;
                         background-position: bottom 4px center;
                         background-repeat: no-repeat;
                         text-align: center;
-
+                        width: fit-content;
+                        
                         & i{
+                            border: 1px solid $secondary;
+                            border-radius: 50%;
+                            width: 26px;
+                            height: 26px;
                             font-size: 22px;
+                            display: block;
+                            margin: auto;
+                            line-height: 26px;
+                        }
+
+                        & span{
+                            font-size: 10px;
+                            width: 100%;
+                            text-align: center;
+                            line-height: 12px;
                         }
 
                         & ~ ul{
@@ -119,10 +173,7 @@ header{
                             display: inline-block;
                             padding: 0 9px;
                             font-size: 12px;
-                        }
-
-                        @media(max-width: 600px){
-                            display: none;
+                            line-height: 40px;
                         }
                     }
 
@@ -162,6 +213,37 @@ header{
                             opacity: 1;
                             top: calc(100% - 5px);
                             pointer-events: all;
+                        }
+                    }
+                }
+
+                & .avatar span{
+                    display: block;
+                    margin-top: 5px;
+                }
+
+                & .avatar span.logged-sign{
+                    display: block;
+                }
+
+                & .avatar span.unlogged-sign{
+                    display: none;
+                }
+
+                & [data-state="logged"]{
+
+                    & .avatar{
+
+                        & .logged-sign{
+                            display: none;
+                        }
+    
+                        & .unlogged-sign{
+                            display: block;
+                        }
+    
+                        & .unlogged-menu{
+                            display: none;
                         }
                     }
                 }

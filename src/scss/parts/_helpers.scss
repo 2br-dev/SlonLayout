@@ -4,6 +4,80 @@ body{
     font-weight: 300;
     color: $text;
     line-height: 1.6rem;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    & .global-wrapper{
+        flex-grow: 1;
+    }
+
+    & a:not(.btn):not(.cart-button):not(.clear){
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+
+    & .add-cart{
+
+        display: inline-flex;
+
+        & .plus, & .minus{
+            padding: 0 10px;
+        }
+
+        & input{
+            display: block;
+            width: 40px;
+            text-align: center;
+            border: 0;
+        }
+    }
+
+    & .hidden{
+        display: none;
+        pointer-events: none;
+    }
+
+    & .cheсk-wrapper{
+
+        & input{
+            display: none;
+
+            & ~ label{
+
+                cursor: pointer;
+                user-select: none;
+
+                &:before{
+                    width: 15px;
+                    height: 15px;
+                    margin-right: 6px;
+                    content: '\F012C';
+                    font-family: 'Material Design Icons';
+                    border-radius: 2px;
+                    background: #ccc;
+                    display: inline-block;
+                    line-height: 15px;
+                    transform: translateY(-1px);
+                    color: transparent;
+                    box-shadow: 0 1px 3px rgba(black, .3) inset;
+                    transition: color .3s, background-color .3s, box-shadow .3s;
+                }
+            }
+
+            &:checked ~ label{
+
+                &:before{
+                    color: #fff;
+                    box-shadow: none;
+                    background-color: $primary;
+                }
+            }
+        }
+    }
 
     & *:focus{
         outline: none;
@@ -16,6 +90,11 @@ body{
     a{
         cursor: pointer;
         font-weight: 400;
+    }
+
+    & .hidden-block{
+        display: none;
+        pointer-events: none;
     }
 
     & .btn{

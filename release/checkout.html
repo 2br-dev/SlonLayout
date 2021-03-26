@@ -8,7 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
 <link rel="stylesheet" href="/css/master.css">
-<title>ООО «Слон» || Помпы</title>
+<title>ООО «Слон» || Корзина</title>
 </head>
 <body>
     <header>
@@ -93,215 +93,283 @@
     <a href="">8 (988) 769-7744</a>
 </li>
 </ul>
-    <div class="global-wrapper" id="products-wrapper">
+    <div class="global-wrapper" id="checkout">
         <div class="container">
-            <div class="row">
+            <form class="row">
                 <div class="col s12">
-                    <ul class="breadcrumbs">
-    <li><a href="/" class="crumb">Главная</a></li>
-    <li class="crumb-separator">›</li>
-    <li><a href="/water.html" class="crumb">Питьевая вода</a></li>
-    <li class="crumb-separator">›</li>
-    <li><a href="/product.html" class="crumb">Мирабель</a></li>
-</ul>
-                </div>
-                <div class="col s12">
-                    <h1>Помпы</h1>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col m3 hidden-block">
-                    <a class="filters-trigger">Фильтры</a>
-<form class="filters-wrapper">
-    <div class="filters">
-        <div class="filter-block">
-            <a class="filter-header">
-                <i class="filter-block-trigger mdi mdi-chevron-right"></i>
-                <span>
-                    Шкафчик
-                </span>
-                <span class="filters-val"></span>
-            </a>
-            <div class="filter-content">
-                <div class="input-field"><input type="radio" value="0" checked class="styled" name="safe"
-                        id="safe3"><label for="safe3">Неважно</label></div>
-                <div class="input-field"><input type="radio" value="1" class="styled" name="safe" id="safe1"><label
-                        for="safe1">Есть</label></div>
-                <div class="input-field"><input type="radio" value="-1" class="styled" name="safe" id="safe2"><label
-                        for="safe2">Нет</label></div>
-            </div>
-        </div>
-        <div class="filter-block">
-            <a class="filter-header">
-                <i class="filter-block-trigger mdi mdi-chevron-right"></i>
-                <span>
-                    Холодильник
-                </span>
-                <span class="filters-val"></span>
-            </a>
-            <div class="filter-content">
-                <div class="input-field"><input type="radio" value="0" checked class="styled" name="refrigerator"
-                        id="refrigerator3"><label for="refrigerator3">Неважно</label></div>
-                <div class="input-field"><input type="radio" value="1" class="styled" name="refrigerator"
-                        id="refrigerator1"><label for="refrigerator1">Есть</label></div>
-                <div class="input-field"><input type="radio" value="-1" class="styled" name="refrigerator"
-                        id="refrigerator2"><label for="refrigerator2">Нет</label></div>
-            </div>
-        </div>
-        <div class="filter-block">
-            <a class="filter-header">
-                <i class="filter-block-trigger mdi mdi-chevron-right"></i>
-                <span>
-                    Нижняя загрузка
-                </span>
-                <span class="filters-val"></span>
-            </a>
-            <div class="filter-content">
-                <div class="input-field"><input type="radio" value="0" checked class="styled" name="loading"
-                        id="loading3"><label for="loading3">Неважно</label></div>
-                <div class="input-field"><input type="radio" value="1" class="styled" name="loading"
-                        id="loading1"><label for="loading1">Есть</label></div>
-                <div class="input-field"><input type="radio" value="-1" class="styled" name="loading"
-                        id="loading2"><label for="loading2">Нет</label></div>
-            </div>
-        </div>
-        <div class="filter-block">
-            <a class="filter-header">
-                <i class="filter-block-trigger mdi mdi-chevron-right"></i>
-                <span>
-                    Охлаждение
-                </span>
-                <span class="filters-val"></span>
-            </a>
-            <div class="filter-content">
-                <div class="input-field"><input type="radio" value="0" checked class="styled" name="cooling"
-                        id="cooling3"><label for="cooling3">Неважно</label></div>
-                <div class="input-field"><input type="radio" value="1" class="styled" name="cooling"
-                        id="cooling1"><label for="cooling1">Есть</label></div>
-                <div class="input-field"><input type="radio" value="-1" class="styled" name="cooling"
-                        id="cooling2"><label for="cooling2">Нет</label></div>
-            </div>
-        </div>
-        <div class="filter-block">
-            <a class="filter-header">
-                <i class="filter-block-trigger mdi mdi-chevron-right"></i>
-                <span>
-                    Нагрев
-                </span>
-                <span class="filters-val"></span>
-            </a>
-            <div class="filter-content">
-                <div class="input-field"><input type="radio" value="0" checked class="styled" name="warming"
-                        id="warming3"><label for="warming3">Неважно</label></div>
-                <div class="input-field"><input type="radio" value="1" class="styled" name="warming"
-                        id="warming1"><label for="warming1">Есть</label></div>
-                <div class="input-field"><input type="radio" value="-1" class="styled" name="warming"
-                        id="warming2"><label for="warming2">Нет</label></div>
-            </div>
-        </div>
-        <div class="filter-block">
-            <a class="filter-header">
-                <i class="filter-block-trigger mdi mdi-chevron-right"></i>
-                <span>
-                    Тип кулера
-                </span>
-                <span class="filters-val"></span>
-            </a>
-            <div class="filter-content">
-                <div class="input-field"><input type="checkbox" value="floor" class="styled" name="type"
-                        id="type1"><label for="type1">Напольный</label></div>
-                <div class="input-field"><input type="checkbox" value="wall" class="styled" name="type"
-                        id="type2"><label for="type2">Настольный</label></div>
-            </div>
-        </div>
-        <div class="filter-block">
-            <a class="filter-header">
-                <i class="filter-block-trigger mdi mdi-chevron-right"></i>
-                <span>
-                    Тип охлаждения
-                </span>
-                <span class="filters-val"></span>
-            </a>
-            <div class="filter-content">
-                <div class="input-field"><input type="checkbox" value="compressor" class="styled" name="cool"
-                        id="cool1"><label for="cool1">Компрессорное</label></div>
-                <div class="input-field"><input type="checkbox" value="electronic" class="styled" name="cool"
-                        id="cool2"><label for="cool2">Электронное</label></div>
-            </div>
-        </div>
-    </div>
-    <a class="btn btn-flat waves-effect waves-dark" id="reset-filters">Сбросить фильтры</a>
-</form>     
-                </div>                
-                <div class="col m12">
-                    <div class="row flex">
-                        <div class="col s12 m6 l3">
-    <div class="card hoverable product-pomp">
-        <div class="image-holder">
-            <a href="/product-pomp.html" class="lazy-image" data-src="/img/pomp.png"></a>
-        </div>
-        <a class="header" href="/product-pomp.html">Помпа электрическая</a>
-        <div class="separator"></div>
-        
-        
-        
-            <div class="price">7200 ₽</div>
-            <div class="subheader">Помпа электрическая AWD&nbsp;4.1</div>
-        
-        <div class="cart-wrapper">
-            <div class="kv-pair card-footer">
-                <div class="key">
-                    
-                    
-                </div>
-                <div class="value right-align">
-                    <a class="btn btn-flat waves-effect waves-dark">Купить</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div><div class="col s12 m6 l3">
-    <div class="card hoverable product-pomp">
-        <div class="image-holder">
-            <a href="/product-pomp.html" class="lazy-image" data-src="/img/pomp.png"></a>
-        </div>
-        <a class="header" href="/product-pomp.html">Помпа электрическая</a>
-        <div class="separator"></div>
-        
-        
-        
-            <div class="price">7200 ₽</div>
-            <div class="subheader">Помпа электрическая AWD&nbsp;4.1</div>
-        
-        <div class="cart-wrapper">
-            <div class="kv-pair card-footer">
-                <div class="key">
-                    
-                    
-                </div>
-                <div class="value right-align">
-                    <a class="btn btn-flat waves-effect waves-dark">Купить</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+                    <div class="underline-wrapper">
+                        <h1>Корзина</h1>
                     </div>
+                </div>
+                <div class="col s12">
                     <div class="row">
-                        <div class="col s12 center-align">
-                            <ul class="pagination">
-    <li class="page"><a>1</a></li>
-    <li class="page-dots">…</li>
-    <li class="page"><a>236</a></li>
-    <li class="page active"><a>237</a></li>
-    <li class="page"><a>238</a></li>
-    <li class="page-dots">…</li>
-    <li class="page"><a>300</a></li>
-</ul>
+                        <div class="col s12">
+            
+                            <div class="underline-wrapper">
+                                <h2>Состав корзины</h2>
+                            </div>
+                            <table class="material-table">
+                                <thead>
+                                    <tr>
+                                        <th>Наименование</th>
+                                        <th>Количество</th>
+                                        <th>Цена за единицу</th>
+                                        <th>Сумма</th>
+                                        <th class="right-align">Действия</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="order">
+    <td class="cart-item-title"><a class="underlined" href="/product.html">Cвитшот «Секретный ангел» (женский вариант) с русским текстом</a></td>
+    <td>
+        <div class="add-cart">
+            <div class="plus">
+                <a>–</a>
+            </div>
+            <input type="number" value="1" min="1" />
+            <div class="minus">
+                <a>+</a>
+            </div>
+        </div>
+    </td>
+    <td>120</td>
+    <td>240</td>
+    <td class="right-align">
+        <a class="mdi mdi-delete"></a>
+    </td>
+</tr><tr class="order">
+    <td class="cart-item-title"><a class="underlined" href="/product.html">Cвитшот «Секретный ангел» (женский вариант) с русским текстом</a></td>
+    <td>
+        <div class="add-cart">
+            <div class="plus">
+                <a>–</a>
+            </div>
+            <input type="number" value="1" min="1" />
+            <div class="minus">
+                <a>+</a>
+            </div>
+        </div>
+    </td>
+    <td>120</td>
+    <td>240</td>
+    <td class="right-align">
+        <a class="mdi mdi-delete"></a>
+    </td>
+</tr><tr class="order">
+    <td class="cart-item-title"><a class="underlined" href="/product.html">Cвитшот «Секретный ангел» (женский вариант) с русским текстом</a></td>
+    <td>
+        <div class="add-cart">
+            <div class="plus">
+                <a>–</a>
+            </div>
+            <input type="number" value="1" min="1" />
+            <div class="minus">
+                <a>+</a>
+            </div>
+        </div>
+    </td>
+    <td>120</td>
+    <td>240</td>
+    <td class="right-align">
+        <a class="mdi mdi-delete"></a>
+    </td>
+</tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
-            </div>
+            </form>
+            <form class="row">
+                <div class="col s12 right-align">
+                    <div>Стоимость: 240₽<span class="delivery-cost"> + 200₽</span></div>
+                    <div class="total">К оплате: <strong>440₽</strong></div>
+                </div>
+                <div class="col l3 m4 s12">
+                    <div class="underline-wrapper">
+                        <h2>Профиль</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col l12 s12">
+                            <div class="input-field">
+                                <input type="text" class="styled" placeholder="Фамилия, Имя, Отчество">
+                                <label for="">Фамилия, Имя, Отчество</label>
+                            </div>
+                        </div>
+                        <div class="col l12 s12">
+                            <div class="input-field">
+                                <input type="text" class="styled" placeholder="E-mail">
+                                <label for="">E-mail</label>
+                            </div>
+                        </div>
+                        <div class="col l12 s12">
+                            <div class="input-field">
+                                <input type="phone" class="styled" placeholder="Телефон">
+                                <label for="">Телефон</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12 right-align">
+                            <a href="#login" class="btn modal-trigger">Авторизоваться</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col l9 m8 s10">
+                    <div class="underline-wrapper">
+                        <h2>Доставка и оплата</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col l9 m7 s12">
+                            <h3>Вид доставки</h3>
+                            <div class="delivery-list">
+                                <div class="input-field">
+    <input 
+        type="radio" 
+        class="styled need-address" 
+        value="del1"
+        name="del" 
+        checked 
+        id="del1">
+    <label for="del1">
+        Самовывоз
+    </label>
+</div><div class="input-field">
+    <input 
+        type="radio" 
+        class="styled " 
+        value="del2"
+        name="del" 
+         
+        id="del2">
+    <label for="del2">
+        CDEK
+    </label>
+</div><div class="input-field">
+    <input 
+        type="radio" 
+        class="styled need-address" 
+        value="del3"
+        name="del" 
+         
+        id="del3">
+    <label for="del3">
+        Транспортная компания до терминала
+    </label>
+</div><div class="input-field">
+    <input 
+        type="radio" 
+        class="styled " 
+        value="del4"
+        name="del" 
+         
+        id="del4">
+    <label for="del4">
+        Курьер
+    </label>
+</div>
+                            </div>
+                        </div>
+                        <div class="col l3 m5 s12">
+                            <h3>Оплата</h3>
+                            <div class="input-field">
+    <input 
+        type="radio" 
+        class="styled " 
+        value="paymnt1"
+        name="paymnt" 
+        checked 
+        id="paymnt1">
+    <label for="paymnt1">
+        Наличными курьеру
+    </label>
+</div><div class="input-field">
+    <input 
+        type="radio" 
+        class="styled " 
+        value="paymnt2"
+        name="paymnt" 
+        checked 
+        id="paymnt2">
+    <label for="paymnt2">
+        Картой онлайн
+    </label>
+</div><div class="input-field">
+    <input 
+        type="radio" 
+        class="styled " 
+        value="paymnt3"
+        name="paymnt" 
+        checked 
+        id="paymnt3">
+    <label for="paymnt3">
+        оплата по счету
+    </label>
+</div>
+                        </div>
+                        <div class="col s12">
+                            <div class="address-list hidden">
+                                <h3>Адрес</h3>
+                                <div class="checkout_changeRegionButton rs-checkout_changeRegionButton">
+                                    <i class="mdi mdi-map-marker accent"></i>
+                                    <span>Анапа</span>
+                                    <a class="small underlined">изменить</a>
+                                </div>
+                                <div class="input-field">
+    <input 
+        type="radio" 
+        class="styled " 
+        value="addr1"
+        name="addr" 
+        checked 
+        id="addr1">
+    <label for="addr1">
+        Россия, Краснодарский край, г. Краснодар, ул. Московская, 129/206
+    </label>
+</div><div class="input-field">
+    <input 
+        type="radio" 
+        class="styled " 
+        value="addr2"
+        name="addr" 
+         
+        id="addr2">
+    <label for="addr2">
+        Россия, Краснодарский край, г. Краснодар, ул. Северная, д. 324, литер Г
+    </label>
+</div><div class="input-field">
+    <input 
+        type="radio" 
+        class="styled " 
+        value="addr3"
+        name="addr" 
+         
+        id="addr3">
+    <label for="addr3">
+        Россия, Ставропольский край, г. Ессентуки, ул. Пушкина, 46/9
+    </label>
+</div>
+                                <div class="input-field"><input type="radio" class="styled" value="user-address" name="addr" id="addr4"><label for="addr4">Другое</label></div>
+                                <div class="input-field hidden" id="user-address">
+                                    <input type="text" class="styled" placeholder="Адрес">
+                                    <label for="">Адрес</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12">
+                            <div class="input-field">
+                                <textarea placeholder="Комментарий к заказу" name="" id="" cols="30" rows="10" class="styled"></textarea>
+                                <label for="">Комментарий к заказу</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12 right-align">
+                            <a class="btn">Офомить заказ</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
     <footer>
