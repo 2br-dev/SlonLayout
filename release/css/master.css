@@ -5458,6 +5458,7 @@ footer {
   background-position: top center; }
 
 #contacts #map {
-  height: 60vh; }
+  height: 60vh;
+  margin-top: -96px; }
   #contacts #map .ol-overlaycontainer-stopevent {
     display: none; }
