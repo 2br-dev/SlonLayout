@@ -25,12 +25,22 @@ body{
         left: -5px;
         height: 100%;
         width: 60px;
-        background: linear-gradient(to right, white 60%, transparent);
+        // background: linear-gradient(to right, white 60%, transparent);
         background-blend-mode: screen;
         margin-top: 0;
         align-items: center;
         justify-content: left;
         padding-left: 10px;
+
+        &:after{
+            border: 1px solid #ccc;
+            padding: 20px 10px;
+            font-size: 24px;
+            margin-left: -10px;
+            background: #fff;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
     }
 
     & .swiper-button-next{
@@ -38,12 +48,22 @@ body{
         right: -5px;
         height: 100%;
         width: 60px;
-        background: linear-gradient(to left, white 60%, transparent);
+        // background: linear-gradient(to left, white 60%, transparent);
         background-blend-mode: screen;
         margin-top: 0;
         align-items: center;
         justify-content: flex-end;
         padding-right: 10px;
+
+        &:after{
+            border: 1px solid #ccc;
+            padding: 20px 10px;
+            font-size: 24px;
+            margin-right: -10px;
+            background: #fff;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
     }
 
     & .add-cart{
