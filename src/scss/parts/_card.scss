@@ -185,3 +185,18 @@
         }
     }
 }
+
+.swiper-slide{
+
+    & .card{
+
+        & .header{
+            white-space: nowrap;
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+    }
+}

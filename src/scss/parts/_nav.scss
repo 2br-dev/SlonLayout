@@ -138,6 +138,7 @@ header{
                         background-repeat: no-repeat;
                         text-align: center;
                         width: fit-content;
+                        position: relative;
                         
                         & i{
                             border: 1px solid $secondary;
@@ -155,6 +156,19 @@ header{
                             width: 100%;
                             text-align: center;
                             line-height: 12px;
+
+                            &.counter{
+                                position: absolute;
+                                top: -8px;
+                                min-width: 15px;
+                                border-radius: 7px;
+                                left: calc(50% + 3px);
+                                background: $secondary;
+                                color: #fff;
+                                z-index: 3;
+                                width: fit-content;
+                                line-height: 15px;
+                            }
                         }
 
                         & ~ ul{

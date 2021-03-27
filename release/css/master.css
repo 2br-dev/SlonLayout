@@ -4051,7 +4051,8 @@ header {
             text-align: center;
             width: -webkit-fit-content;
             width: -moz-fit-content;
-            width: fit-content; }
+            width: fit-content;
+            position: relative; }
             header .header-wrapper nav > ul .nav-icon .avatar i {
               border: 1px solid #0572AF;
               border-radius: 50%;
@@ -4066,6 +4067,19 @@ header {
               width: 100%;
               text-align: center;
               line-height: 12px; }
+              header .header-wrapper nav > ul .nav-icon .avatar span.counter {
+                position: absolute;
+                top: -8px;
+                min-width: 15px;
+                border-radius: 7px;
+                left: calc(50% + 3px);
+                background: #0572AF;
+                color: #fff;
+                z-index: 3;
+                width: -webkit-fit-content;
+                width: -moz-fit-content;
+                width: fit-content;
+                line-height: 15px; }
             header .header-wrapper nav > ul .nav-icon .avatar ~ ul {
               right: 0; }
         header .header-wrapper nav > ul > li {
@@ -4137,6 +4151,28 @@ body {
     flex-grow: 1; }
   body a:not(.btn):not(.btn-large):not(.btn-small):not(.cart-button):not(.clear):hover {
     text-decoration: underline; }
+  body .swiper-button-prev {
+    top: 0;
+    left: -5px;
+    height: 100%;
+    width: 60px;
+    background: linear-gradient(to right, white 60%, transparent);
+    background-blend-mode: screen;
+    margin-top: 0;
+    align-items: center;
+    justify-content: left;
+    padding-left: 10px; }
+  body .swiper-button-next {
+    top: 0;
+    right: -5px;
+    height: 100%;
+    width: 60px;
+    background: linear-gradient(to left, white 60%, transparent);
+    background-blend-mode: screen;
+    margin-top: 0;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px; }
   body .add-cart {
     display: inline-flex; }
     body .add-cart .plus, body .add-cart .minus {
@@ -4342,6 +4378,14 @@ body {
     color: #fff;
     background: #80C342;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); }
+
+.swiper-slide .card .header {
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 20px;
+  box-sizing: border-box; }
 
 .counter-wrapper {
   display: inline-flex; }
@@ -5714,6 +5758,27 @@ footer {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat; }
+
+#product .color-selector {
+  text-align: center;
+  margin: 30px 0; }
+
+#product .color, #product .colors {
+  border: 2px solid #80C342;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%; }
+
+#product .color {
+  display: inline-block; }
+
+#product .colors {
+  display: inline-flex;
+  transform: translateY(-2px);
+  overflow: hidden; }
+  #product .colors span {
+    display: block;
+    flex-grow: 1; }
 
 #product .product-price {
   font-size: 32px;

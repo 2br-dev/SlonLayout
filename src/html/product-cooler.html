@@ -16,6 +16,21 @@
             <div class="row">
                 <div class="col xl4 l4 m6 s12">
                     <div class="lazy-image product-image" data-src="/img/cooler.png"></div>
+                    <div class="color-selector">
+                        <a class="color black tooltipped" data-position="top" data-tooltip="Черный"></a>
+                        <a class="color white tooltipped" data-position="top" data-tooltip="Белый"></a>
+                        <a class="colors tooltipped" data-position="top" data-tooltip="Черный, красный">
+                            <span class="black"></span>
+                            <span class="red"></span>
+                        </a>
+                        <a class="colors tooltipped" data-position="top" data-tooltip="Черный, белый, серебро">
+                            <span class="black"></span>
+                            <span class="white"></span>
+                            <span class="grey"></span>
+                        </a>
+                        <a class="color green tooltipped" data-position="top" data-tooltip="Зеленый"></a>
+                        <a class="color brown tooltipped" data-position="top" data-tooltip="Коричневый"></a>
+                    </div>
                 </div>
                 <div class="col xl8 l8 m6 s12">
                     <div class="row">
@@ -25,61 +40,7 @@
                             <a class="btn waves-effect waves-light">
                                 <i class="mdi mdi-scale-balance"></i>
                             </a>
-                            <div class="kv-pair separated">
-                                <div class="key">Тип кулера</div>
-                                <div class="dotted-separator"></div>
-                                <div class="value">Напольный</div>
-                            </div>
-                            <div class="kv-pair separated">
-                                <div class="key">Тип охлаждения</div>
-                                <div class="dotted-separator"></div>
-                                <div class="value">Электронное</div>
-                            </div>
-                            <div class="kv-pair separated">
-                                <div class="key">Функции</div>
-                                <div class="dotted-separator"></div>
-                                <div class="value">Охлаждение и нагрев</div>
-                            </div>
-                            <div class="kv-pair separated">
-                                <div class="key">Нажатие</div>
-                                <div class="dotted-separator"></div>
-                                <div class="value">Кружкой </div>
-                            </div>
-                            <div class="kv-pair separated">
-                                <div class="key">Габариты</div>
-                                <div class="dotted-separator"></div>
-                                <div class="value">980х340х310</div>
-                            </div>
-                            <div class="kv-pair separated">
-                                <div class="key">Мощность нагрева</div>
-                                <div class="dotted-separator"></div>
-                                <div class="value">550 Вт</div>
-                            </div>
-                            <div class="kv-pair separated">
-                                <div class="key">Мощность охлаждения</div>
-                                <div class="dotted-separator"></div>
-                                <div class="value">70 Вт</div>
-                            </div>
-                            <div class="kv-pair separated">
-                                <div class="key">Температура гор. воды</div>
-                                <div class="dotted-separator"></div>
-                                <div class="value">≥ 95°С</div>
-                            </div>
-                            <div class="kv-pair separated">
-                                <div class="key">Произв-ть гор. воды</div>
-                                <div class="dotted-separator"></div>
-                                <div class="value">5 л/ч</div>
-                            </div>
-                            <div class="kv-pair separated">
-                                <div class="key">Температура хол. воды</div>
-                                <div class="dotted-separator"></div>
-                                <div class="value">≥ 12°С</div>
-                            </div>
-                            <div class="kv-pair separated">
-                                <div class="key">Произв-ть хол. воды</div>
-                                <div class="dotted-separator"></div>
-                                <div class="value">0,7 л/ч</div>
-                            </div>
+                            @@loop('./parts/product-char.html', './data/product-chars.json')
                             <div class="features-wrapper">
                                 <span class="feature"><i class="mdi mdi-bottle-tonic-outline"></i> Нижняя загрузка</span>
                                 <span class="feature active"><i class="mdi mdi-cupboard"></i> Шкафчик</span>
@@ -97,6 +58,8 @@
                         <div class="swiper-wrapper">
                             @@loop('./parts/card.html', './data/cooler-main-cards.json')
                         </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                     </div>
                 </div>
             </div>

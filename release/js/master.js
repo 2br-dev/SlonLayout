@@ -22880,7 +22880,9 @@ function restoreDataImage(){
 //= Инициализация тултипов
 function initTooltip(){
     var elems = document.querySelectorAll('.tooltipped');
-    var instances = M.Tooltip.init(elems, {});
+    var instances = M.Tooltip.init(elems, {
+        enterDelay: 800
+    });
 }
 
 //= Общая инициализация ===================================================
@@ -22901,6 +22903,10 @@ function init(){
     miscSliders = new Swiper('.misc-slider', {
         loop: true,
         spaceBetween: 20,
+        navigation: {
+            prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-button-next',
+        },
         breakpoints: {
             420: {
                 slidesPerView: 1,

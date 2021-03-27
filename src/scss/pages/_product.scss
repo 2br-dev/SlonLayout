@@ -7,6 +7,33 @@
         background-repeat: no-repeat;
     }
 
+    & .color-selector{
+        text-align: center;
+        margin: 30px 0;
+    }
+    
+    & .color, & .colors{
+        border: 2px solid $primary;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+    }
+    
+    & .color{
+        display: inline-block;
+    }
+
+    & .colors{
+        display: inline-flex;
+        transform: translateY(-2px);
+        overflow: hidden;
+
+        & span{
+            display: block;
+            flex-grow: 1;
+        }
+    }
+
     & .product-price{
         font-size: 32px;
         font-weight: 600;
