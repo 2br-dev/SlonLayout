@@ -5970,24 +5970,24 @@ footer {
           #account .subtable-td .subtable-wrapper .subtable tr td {
             flex-grow: 1; } }
 
-#checkout .mdi.mdi-map-marker {
+#checkout-wrapper .mdi.mdi-map-marker {
   font-size: 21px;
   color: #80C342; }
 
-#checkout .address-list {
+#checkout-wrapper .address-list {
   margin-top: 40px; }
 
 @media (max-width: 700px) {
-  #checkout .material-table thead {
+  #checkout-wrapper .material-table thead {
     display: none; }
-  #checkout .material-table tbody {
+  #checkout-wrapper .material-table tbody {
     display: block;
     width: 100%; }
-  #checkout .material-table .order {
+  #checkout-wrapper .material-table .order {
     display: flex;
     flex-wrap: wrap;
     width: 100%; }
-    #checkout .material-table .order td {
+    #checkout-wrapper .material-table .order td {
       display: block;
       flex-grow: 1; } }
 
