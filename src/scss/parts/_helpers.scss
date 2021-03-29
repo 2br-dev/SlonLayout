@@ -43,6 +43,11 @@ body{
         }
     }
 
+    & .hidden{
+        display: none !important;
+        pointer-events: none !important;
+    }
+
     & .swiper-button-next{
         top: 0;
         right: -5px;

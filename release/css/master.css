@@ -4169,6 +4169,9 @@ body {
       background: #fff;
       border-top-right-radius: 10px;
       border-bottom-right-radius: 10px; }
+  body .hidden {
+    display: none !important;
+    pointer-events: none !important; }
   body .swiper-button-next {
     top: 0;
     right: -5px;
@@ -5966,6 +5969,20 @@ footer {
 
 #checkout .address-list {
   margin-top: 40px; }
+
+@media (max-width: 700px) {
+  #checkout .material-table thead {
+    display: none; }
+  #checkout .material-table tbody {
+    display: block;
+    width: 100%; }
+  #checkout .material-table .order {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%; }
+    #checkout .material-table .order td {
+      display: block;
+      flex-grow: 1; } }
 
 #compare .compare-table th {
   position: sticky;

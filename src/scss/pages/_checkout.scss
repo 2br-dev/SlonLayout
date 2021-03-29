@@ -8,4 +8,32 @@
     & .address-list{
         margin-top: 40px;
     }
+
+    & .material-table{
+
+        
+        @media(max-width: 700px){
+
+            & thead{
+                display: none;
+            }
+
+            & tbody{
+                display: block;
+                width: 100%;
+            }
+            
+            & .order{
+
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+
+                & td{
+                    display: block;
+                    flex-grow: 1;
+                }
+            }
+        }
+    }
 }

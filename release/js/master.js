@@ -22741,10 +22741,46 @@ $(() => {
     $('body').on('click', '.hidden-block-trigger', toggleBlock);
     $('body').on('change', '[name="del"]', updateAddressList);
     $('body').on('change', '[name="addr"]', updateAddressField);
-
+    $('body').on('change', '[name="delivery-period"]', toggleDeliveryPeriod);
+    $('body').on('change', '[name="delivery-interval"]', toggleNotRecall);
 });
 
-//= Переключение доп.адреса =============================================
+//= Переключение флажка «не перезванивать» ================================
+function toggleNotRecall(){
+    if($(this).next().text() == 'Не указано'){
+        $('#dont-recall + label').addClass('hidden');
+    }else{
+        $('#dont-recall + label').removeClass('hidden');
+    }
+}
+
+//= Переключение периода доставки =========================================
+function toggleDeliveryPeriod(e){
+    var dom = `<div class="input-field"><input type="radio" name="delivery-interval" class="styled" id="interval-[+id+]"><label for="interval-[+id+]">[+label+]</label></div>`;
+    if($(this).next().text() == 'Другое'){
+        $.ajax({
+            url: './data/intervals.json',
+            success: response => {
+                var dom_ready = "";
+                $(response).each((index, el) => {
+                    t = dom;
+                    t = t.replaceAll('[+id+]', (index+1)).replace('[+label+]', el);
+                    dom_ready += t;
+                });
+                
+                $('#interval-wrapper').html(dom_ready);
+                $('#delivery-interval').removeClass('hidden');
+            }
+        });
+    }else{
+        $('#interval-wrapper').html('');
+        $('#delivery-interval').addClass('hidden');
+        $('#interval-0').prop('checked', 'checked');
+        $('#dont-recall + label').addClass('hidden');
+    }
+}
+
+//= Переключение доп.адреса ===============================================
 function updateAddressField(e){
 	if($(this).val() == 'user-address'){
 		$('#user-address').removeClass('hidden');
@@ -22753,7 +22789,7 @@ function updateAddressField(e){
 	}
 }
 
-//= Переключение блока адресов ===========================================
+//= Переключение блока адресов ============================================
 function updateAddressList(e){
 	if($(this).hasClass('need-address')){
 		$('.address-list').removeClass('hidden');
