@@ -265,10 +265,20 @@ header{
             }
             
             & .burger-wrapper{
-                padding-top: 52px;
+                padding-top: 36px;
                 padding-left: 10px;
                 padding-right: 10px;
                 margin-left: 5px;
+
+                & .burger{
+                    font-size: 26px !important;
+                    display: inline-block;
+                    line-height: 40px;
+
+                    @media(max-width: 400px){
+                        line-height: 30px;
+                    }
+                }
 
                 @media(min-width: 1100px){
                     display: none;

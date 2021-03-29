@@ -4128,10 +4128,17 @@ header {
         header .header-wrapper nav > ul [data-state="logged"] .avatar .unlogged-menu {
           display: none; }
       header .header-wrapper nav .burger-wrapper {
-        padding-top: 52px;
+        padding-top: 36px;
         padding-left: 10px;
         padding-right: 10px;
         margin-left: 5px; }
+        header .header-wrapper nav .burger-wrapper .burger {
+          font-size: 26px !important;
+          display: inline-block;
+          line-height: 40px; }
+          @media (max-width: 400px) {
+            header .header-wrapper nav .burger-wrapper .burger {
+              line-height: 30px; } }
         @media (min-width: 1100px) {
           header .header-wrapper nav .burger-wrapper {
             display: none; } }
