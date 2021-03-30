@@ -4155,7 +4155,8 @@ body {
   display: flex;
   flex-direction: column; }
   body .global-wrapper {
-    flex-grow: 1; }
+    flex-grow: 1;
+    padding-bottom: 50px; }
   body a:not(.btn):not(.btn-large):not(.btn-small):not(.cart-button):not(.clear):hover {
     text-decoration: underline; }
   body .swiper-button-prev {
