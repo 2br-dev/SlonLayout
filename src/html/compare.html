@@ -8,19 +8,24 @@
     <div class="global-wrapper" id="compare">
         <div class="container">
             <h1>Сравнение</h1>
-            <table class="compare-table">
-                <thead>
-                    <tr>
-                        <th class="char">Характеристика</th>
-                        <th class="val">SMixx 38 TD</th>
-                        <th class="val">SMixx 1250 L + шкафчик</th>
-                        <th class="val">SMixx 1238 L</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @@loop('./parts/compare-entry.html', './data/compare.json')
-                </tbody>
-            </table>
+            <div class="compare-table-wrapper">
+                <table class="compare-table">
+                    <thead>
+                        <tr>
+                            <th class="char">Характеристика</th>
+                            <th class="val">SMixx 38 TD</th>
+                            <th class="val">SMixx 1250 L + шкафчик</th>
+                            <th class="val">SMixx 1238 L</th>
+                            <th class="val">SMixx 38 TD</th>
+                            <th class="val">SMixx 1250 L + шкафчик</th>
+                            <th class="val">SMixx 1238 L</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @@loop('./parts/compare-entry.html', './data/compare.json')
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
     @@include('./parts/footer.html')

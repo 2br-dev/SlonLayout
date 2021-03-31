@@ -4283,6 +4283,12 @@ body {
         padding: 20px 0; } }
   body .pagination .page.active {
     background: #80C342; }
+  body::-webkit-scrollbar {
+    width: 8px;
+    background: #fff; }
+  body::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, transparent, #80C342, transparent);
+    border-radius: 50%; }
 
 .card {
   margin-top: 40px;
@@ -5993,20 +5999,13 @@ footer {
       flex-grow: 1; } }
 
 #compare .compare-table th {
-  position: sticky;
-  position: -moz-sticky;
-  top: 90px;
   background: #fff;
   z-index: 2;
   border-bottom: 2px solid #ccc; }
-  @media (max-width: 1000px) {
-    #compare .compare-table th {
-      top: 55px; } }
 
 #compare .compare-table .char {
   white-space: nowrap;
-  vertical-align: top;
-  border-right: 1px solid #ccc; }
+  vertical-align: top; }
 
 #compare .compare-table .val {
   vertical-align: top;
@@ -6023,9 +6022,11 @@ footer {
   #compare .compare-table tr {
     display: flex;
     flex-direction: column; }
-    #compare .compare-table tr td.char {
+    #compare .compare-table tr .char {
       font-weight: 600;
       border-right: 0; }
+      #compare .compare-table tr .char:after {
+        display: none !important; }
     #compare .compare-table tr td.val {
       width: 100% !important;
       display: flex; }
@@ -6036,3 +6037,54 @@ footer {
         flex-shrink: 0; }
       #compare .compare-table tr td.val span {
         display: block; } }
+
+#compare .compare-table-wrapper {
+  overflow-x: auto; }
+  #compare .compare-table-wrapper::-webkit-scrollbar {
+    height: 4px;
+    background: #fff; }
+  #compare .compare-table-wrapper::-webkit-scrollbar-thumb {
+    background: linear-gradient(to left, transparent, #80C342, transparent);
+    border-radius: 50%; }
+  #compare .compare-table-wrapper tr td, #compare .compare-table-wrapper tr th {
+    position: relative;
+    overflow: hidden; }
+    #compare .compare-table-wrapper tr td .compare-entry-actions, #compare .compare-table-wrapper tr th .compare-entry-actions {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.7);
+      transition: left .2s;
+      left: 100%;
+      transition-delay: .6s; }
+      #compare .compare-table-wrapper tr td .compare-entry-actions a, #compare .compare-table-wrapper tr th .compare-entry-actions a {
+        color: #fff;
+        font-size: 18px;
+        padding: 6px 10px;
+        border-radius: 4px;
+        margin: 0 4px;
+        transition: background-color .4s; }
+        #compare .compare-table-wrapper tr td .compare-entry-actions a:hover, #compare .compare-table-wrapper tr th .compare-entry-actions a:hover {
+          background-color: #80C342; }
+    #compare .compare-table-wrapper tr td:hover .compare-entry-actions, #compare .compare-table-wrapper tr th:hover .compare-entry-actions {
+      left: 0; }
+    #compare .compare-table-wrapper tr td.char, #compare .compare-table-wrapper tr th.char {
+      position: relative;
+      position: sticky;
+      position: -moz-sticky;
+      left: 0;
+      z-index: 3;
+      background: #fff; }
+      #compare .compare-table-wrapper tr td.char:after, #compare .compare-table-wrapper tr th.char:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 1px;
+        width: 1px;
+        height: 100%;
+        border-right: 1px solid #ccc; }

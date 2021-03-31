@@ -219,4 +219,14 @@ body{
             }
         }
     }
+
+    &::-webkit-scrollbar{
+        width: 8px;
+        background: #fff;
+    }
+
+    &::-webkit-scrollbar-thumb{
+        background: linear-gradient(to bottom, transparent, $primary, transparent);
+        border-radius: 50%;
+    }
 }
