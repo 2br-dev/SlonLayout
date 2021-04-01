@@ -92,11 +92,17 @@
                             <div class="input-field"><input type="radio" name="delivery-period" id="period2">
                                 <label for="period2">Другое</label>
                             </div>
-                            <div id="delivery-interval" class="hidden">
-                                <h3>Интервал доставки</h3>
-                                <div class="input-field"><input type="radio" name="delivery-interval" class="styled" id="interval-0" checked><label for="interval-0">Не указано</label></div>
-                                <div id="interval-wrapper"></div>
-                                <div class="input-field"><input type="checkbox" class="styled" id="dont-recall"><label for="dont-recall" class="hidden">Не перезванивать</label></div>
+                            <div class="delivery-info">
+                                <div class="hidden input-field" id="delivery-date">
+                                    <input type="text" class="datepicker styled" readonly="readonly" placeholder="Выберите дату">
+                                    <label>Выберите дату</label>
+                                </div>
+                                <div id="delivery-interval" class="hidden">
+                                    <h3>Интервал доставки</h3>
+                                    <div class="input-field"><input type="radio" name="delivery-interval" class="styled" id="interval-0" checked><label for="interval-0">Не указано</label></div>
+                                    <div id="interval-wrapper"></div>
+                                    <div class="input-field"><input type="checkbox" class="styled" id="dont-recall"><label for="dont-recall" class="hidden">Не перезванивать</label></div>
+                                </div>
                             </div>
                         </div>
                         <div class="col l4 m12 s12">

@@ -2028,7 +2028,7 @@ a {
   box-shadow: none !important; }
 
 /* 2dp elevation modified*/
-.z-depth-1, .card-panel, .card, .btn, .btn-large, .btn-small, .btn-floating, .sidenav {
+.z-depth-1, .card-panel, .card, .btn, .btn-large, .btn-small, .btn-floating, .dropdown-content, .sidenav {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2); }
 
 .z-depth-1-half, .btn:hover, .btn-large:hover, .btn-small:hover, .btn-floating:hover {
@@ -3031,6 +3031,64 @@ button.btn-floating {
 .btn-block {
   display: block; }
 
+.dropdown-content {
+  background-color: #fff;
+  margin: 0;
+  display: none;
+  min-width: 100px;
+  overflow-y: auto;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  transform-origin: 0 0; }
+  .dropdown-content:focus {
+    outline: 0; }
+  .dropdown-content li {
+    clear: both;
+    color: rgba(0, 0, 0, 0.87);
+    cursor: pointer;
+    min-height: 50px;
+    line-height: 1.5rem;
+    width: 100%;
+    text-align: left; }
+    .dropdown-content li:hover, .dropdown-content li.active {
+      background-color: #eee; }
+    .dropdown-content li:focus {
+      outline: none; }
+    .dropdown-content li.divider {
+      min-height: 0;
+      height: 1px; }
+    .dropdown-content li > a, .dropdown-content li > span {
+      font-size: 16px;
+      color: #26a69a;
+      display: block;
+      line-height: 22px;
+      padding: 14px 16px; }
+    .dropdown-content li > span > label {
+      top: 1px;
+      left: 0;
+      height: 18px; }
+    .dropdown-content li > a > i {
+      height: inherit;
+      line-height: inherit;
+      float: left;
+      margin: 0 24px 0 0;
+      width: 24px; }
+
+body.keyboard-focused .dropdown-content li:focus {
+  background-color: #dadada; }
+
+.input-field.col .dropdown-content [type="checkbox"] + label {
+  top: 1px;
+  left: 0;
+  height: 18px;
+  transform: none; }
+
+.dropdown-trigger {
+  cursor: pointer; }
+
 /*!
  * Waves v0.6.0
  * http://fian.my.id/Waves
@@ -3375,6 +3433,137 @@ button.btn-floating {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 997;
   display: none; }
+
+/* Modal */
+.datepicker-modal {
+  max-width: 325px;
+  min-width: 300px;
+  max-height: none; }
+
+.datepicker-container.modal-content {
+  display: flex;
+  flex-direction: column;
+  padding: 0; }
+
+.datepicker-controls {
+  display: flex;
+  justify-content: space-between;
+  width: 280px;
+  margin: 0 auto; }
+  .datepicker-controls .selects-container {
+    display: flex; }
+  .datepicker-controls .select-wrapper input {
+    border-bottom: none;
+    text-align: center;
+    margin: 0; }
+    .datepicker-controls .select-wrapper input:focus {
+      border-bottom: none; }
+  .datepicker-controls .select-wrapper .caret {
+    display: none; }
+  .datepicker-controls .select-year input {
+    width: 50px; }
+  .datepicker-controls .select-month input {
+    width: 70px; }
+
+.month-prev, .month-next {
+  margin-top: 4px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none; }
+
+/* Date Display */
+.datepicker-date-display {
+  flex: 1 auto;
+  background-color: #26a69a;
+  color: #fff;
+  padding: 20px 22px;
+  font-weight: 500; }
+  .datepicker-date-display .year-text {
+    display: block;
+    font-size: 1.5rem;
+    line-height: 25px;
+    color: rgba(255, 255, 255, 0.7); }
+  .datepicker-date-display .date-text {
+    display: block;
+    font-size: 2.8rem;
+    line-height: 47px;
+    font-weight: 500; }
+
+/* Calendar */
+.datepicker-calendar-container {
+  flex: 2.5 auto; }
+
+.datepicker-table {
+  width: 280px;
+  font-size: 1rem;
+  margin: 0 auto; }
+  .datepicker-table thead {
+    border-bottom: none; }
+  .datepicker-table th {
+    padding: 10px 5px;
+    text-align: center; }
+  .datepicker-table tr {
+    border: none; }
+  .datepicker-table abbr {
+    text-decoration: none;
+    color: #999; }
+  .datepicker-table td {
+    border-radius: 50%;
+    padding: 0; }
+    .datepicker-table td.is-today {
+      color: #26a69a; }
+    .datepicker-table td.is-selected {
+      background-color: #26a69a;
+      color: #fff; }
+    .datepicker-table td.is-outside-current-month, .datepicker-table td.is-disabled {
+      color: rgba(0, 0, 0, 0.3);
+      pointer-events: none; }
+
+.datepicker-day-button {
+  background-color: transparent;
+  border: none;
+  line-height: 38px;
+  display: block;
+  width: 100%;
+  border-radius: 50%;
+  padding: 0 5px;
+  cursor: pointer;
+  color: inherit; }
+  .datepicker-day-button:focus {
+    background-color: rgba(43, 161, 150, 0.25); }
+
+/* Footer */
+.datepicker-footer {
+  width: 280px;
+  margin: 0 auto;
+  padding-bottom: 5px;
+  display: flex;
+  justify-content: space-between; }
+
+.datepicker-cancel,
+.datepicker-clear,
+.datepicker-today,
+.datepicker-done {
+  color: #26a69a;
+  padding: 0 1rem; }
+
+.datepicker-clear {
+  color: #F44336; }
+
+/* Media Queries */
+@media only screen and (min-width: 601px) {
+  .datepicker-modal {
+    max-width: 625px; }
+  .datepicker-container.modal-content {
+    flex-direction: row; }
+  .datepicker-date-display {
+    flex: 0 1 270px; }
+  .datepicker-controls,
+  .datepicker-table,
+  .datepicker-footer {
+    width: 320px; }
+  .datepicker-day-button {
+    line-height: 44px; } }
 
 /**
  * Swiper 6.4.5
@@ -3985,7 +4174,7 @@ header {
           background-size: 70% auto; } }
     header .header-wrapper .logo-separator {
       flex-grow: 1; }
-      @media (min-width: 1100px) {
+      @media (min-width: 1101px) {
         header .header-wrapper .logo-separator {
           display: none; } }
     header .header-wrapper nav {
@@ -4139,7 +4328,7 @@ header {
           @media (max-width: 400px) {
             header .header-wrapper nav .burger-wrapper .burger {
               line-height: 30px; } }
-        @media (min-width: 1100px) {
+        @media (min-width: 1101px) {
           header .header-wrapper nav .burger-wrapper {
             display: none; } }
         @media (max-width: 900px) {
@@ -5619,11 +5808,43 @@ footer {
     .sidenav .folder.expanded + ul li {
       max-height: 48px; }
 
-.modal {
+/* Validation Sass Placeholders */
+.modal#login, .modal#register {
   max-width: 400px; }
-  .modal .modal-header {
+  .modal#login .modal-header, .modal#register .modal-header {
     font-weight: 600;
     font-size: 21px; }
+
+.modal.datepicker-modal .datepicker-select {
+  display: none; }
+
+.modal.datepicker-modal .datepicker-date-display {
+  background-color: #80C342; }
+
+.modal.datepicker-modal .is-selected .datepicker-day-button {
+  background: #80C342;
+  border: 0; }
+
+.modal.datepicker-modal .is-today .datepicker-day-button {
+  color: #80C342;
+  border: 0; }
+
+.modal.datepicker-modal .confirmation-btns button {
+  color: #80C342; }
+
+.modal.datepicker-modal .select-dropdown {
+  border: none;
+  padding: 10px;
+  background-color: transparent;
+  box-sizing: border-box; }
+
+.modal.datepicker-modal .select-year input {
+  width: 65px;
+  height: 46px; }
+
+.modal.datepicker-modal .select-month input {
+  width: 120px;
+  height: 46px; }
 
 #main section#hero {
   height: 100vh;

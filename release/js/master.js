@@ -22745,6 +22745,25 @@ $(() => {
     $('body').on('change', '[name="delivery-interval"]', toggleNotRecall);
 });
 
+//= Загрузка диапазонов ===================================================
+function loadRanges(){
+    var dom = `<div class="input-field"><input type="radio" name="delivery-interval" class="styled" id="interval-[+id+]"><label for="interval-[+id+]">[+label+]</label></div>`;
+    $.ajax({
+        url: './data/intervals.json',
+        success: response => {
+            var dom_ready = "";
+            $(response).each((index, el) => {
+                t = dom;
+                t = t.replaceAll('[+id+]', (index+1)).replace('[+label+]', el);
+                dom_ready += t;
+            });
+            $('#interval-wrapper').html(dom_ready);
+            $('#delivery-interval').removeClass('hidden');
+            $('#interval-0').prop('checked', 'checked');
+        }
+    });
+}
+
 //= Переключение флажка «не перезванивать» ================================
 function toggleNotRecall(){
     if($(this).next().text() == 'Не указано'){
@@ -22756,27 +22775,12 @@ function toggleNotRecall(){
 
 //= Переключение периода доставки =========================================
 function toggleDeliveryPeriod(e){
-    var dom = `<div class="input-field"><input type="radio" name="delivery-interval" class="styled" id="interval-[+id+]"><label for="interval-[+id+]">[+label+]</label></div>`;
     if($(this).next().text() == 'Другое'){
-        $.ajax({
-            url: './data/intervals.json',
-            success: response => {
-                var dom_ready = "";
-                $(response).each((index, el) => {
-                    t = dom;
-                    t = t.replaceAll('[+id+]', (index+1)).replace('[+label+]', el);
-                    dom_ready += t;
-                });
-                
-                $('#interval-wrapper').html(dom_ready);
-                $('#delivery-interval').removeClass('hidden');
-            }
-        });
+        $('#delivery-date').removeClass('hidden');
+        $('.delivery-info').removeClass('hidden');
     }else{
-        $('#interval-wrapper').html('');
-        $('#delivery-interval').addClass('hidden');
-        $('#interval-0').prop('checked', 'checked');
-        $('#dont-recall + label').addClass('hidden');
+        $('#delivery-date').addClass('hidden');
+        $('.delivery-info').addClass('hidden');
     }
 }
 
@@ -22978,6 +22982,74 @@ function init(){
         element.indeterminate = true;
 
         $(element).on('change', setIndeterminate);
+    });
+
+    var datepickers = M.Datepicker.init(document.querySelectorAll('.datepicker'), {
+        firstDay: 1,
+        autoClose: true,
+        format: 'dd mmmm yyyy',
+        onSelect: loadRanges,
+        i18n: {
+            done: "OK",
+            cancel: "Отмена",
+            clear: "Очистить",
+            setDefaultDate: true,
+            months: [
+                "Январь",
+                "Февраль",
+                "Март",
+                "Апрель",
+                "Май",
+                "Июнь",
+                "Июль",
+                "Август",
+                "Сентябрь",
+                "Октябрь",
+                "Ноябрь",
+                "Декабрь"
+            ],
+            monthsShort: [
+                "Янв",
+                "Фев",
+                "Мрт",
+                "Апр",
+                "Май",
+                "Июн",
+                "Июл",
+                "Авг",
+                "Сен",
+                "Окт",
+                "Ноя",
+                "Дек"
+            ],
+            weekdays: [
+                "Воскресенье",
+                "Понедельник",
+                "Вториник",
+                "Среда",
+                "Четвер",
+                "Пятница",
+                "Суббота",
+            ],
+            weekdaysShort: [
+                "Вс",
+                "Пн",
+                "Вт",
+                "Ср",
+                "Чт",
+                "Пт",
+                "Сб",
+            ],
+            weekdaysAbbrev: [
+                'В',
+                'П',
+                'В',
+                'С',
+                'Ч',
+                'П',
+                'С',
+            ]
+        }
     });
     
 }
