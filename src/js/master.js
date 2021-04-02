@@ -20,27 +20,35 @@ $(() => {
 });
 
 //= Загрузка диапазонов ===================================================
-function loadRanges(){
+function loadIntervals(date){
     var dom = `<div class="input-field"><input type="radio" name="delivery-interval" class="styled" id="interval-[+id+]"><label for="interval-[+id+]">[+label+]</label></div>`;
+    var dom_ready = "";
     $.ajax({
-        url: './data/intervals.json',
-        success: response => {
-            var dom_ready = "";
-            $(response).each((index, el) => {
-                t = dom;
-                t = t.replaceAll('[+id+]', (index+1)).replace('[+label+]', el);
+        url: $('#delivery-date').data('url'),
+        type: "POST",
+        dataType: "JSON",
+        data: {
+            delivery_date: date.getTime()/1000
+        },
+        success: (res) => {
+            for(var key in res.intervals){
+                var t = dom;
+                t = t.replaceAll('[+id+]', (+key+1)).replace('[+label+]', res.intervals[key]);
                 dom_ready += t;
-            });
+            }
             $('#interval-wrapper').html(dom_ready);
             $('#delivery-interval').removeClass('hidden');
             $('#interval-0').prop('checked', 'checked');
+        },
+        error: (err) => {
+            console.error(err)
         }
     });
 }
 
 //= Переключение флажка «не перезванивать» ================================
 function toggleNotRecall(){
-    if($(this).next().text() == 'Не указано'){
+    if($(this).next().text() == 'Не указан'){
         $('#dont-recall + label').addClass('hidden');
     }else{
         $('#dont-recall + label').removeClass('hidden');
@@ -49,7 +57,7 @@ function toggleNotRecall(){
 
 //= Переключение периода доставки =========================================
 function toggleDeliveryPeriod(e){
-    if($(this).next().text() == 'Другое'){
+    if($(this).next().text() == 'Другая дата'){
         $('#delivery-date').removeClass('hidden');
         $('.delivery-info').removeClass('hidden');
     }else{
@@ -213,36 +221,37 @@ function init(){
 
     setNavbarBackground();
     $('.tabs').tabs();
-
-    miscSliders = new Swiper('.misc-slider', {
-        loop: true,
-        spaceBetween: 20,
-        navigation: {
-            prevEl: '.swiper-button-prev',
-            nextEl: '.swiper-button-next',
-        },
-        breakpoints: {
-            420: {
-                slidesPerView: 1,
+    if($('.misc-slider').length) {
+        miscSliders = new Swiper('.misc-slider', {
+            loop: true,
+            spaceBetween: 20,
+            navigation: {
+                prevEl: '.swiper-button-prev',
+                nextEl: '.swiper-button-next',
             },
-            520: {
-                slidesPerView: 2,
-            },
-            800: {
-                slidesPerView: 3,
-            },
-            1400: {
-                slidesPerView: 4,
+            breakpoints: {
+                420: {
+                    slidesPerView: 1,
+                },
+                520: {
+                    slidesPerView: 2,
+                },
+                800: {
+                    slidesPerView: 3,
+                },
+                1400: {
+                    slidesPerView: 4,
+                }
             }
-        }
-    });
+        });
 
-    $(miscSliders).each((index, swiper) => {
-        swiper.on('slideChange', () => {
-            $('.lazy-image').lazy();
-            initTooltip();
-        })
-    });
+        $(miscSliders).each((index, swiper) => {
+            swiper.on('slideChange', () => {
+                $('.lazy-image').lazy();
+                initTooltip();
+            })
+        });
+    }
 
     $('textarea').each(function () {
         this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;');
@@ -258,11 +267,16 @@ function init(){
         $(element).on('change', setIndeterminate);
     });
 
+    //Получаем завтрашнюю дату
+    var current_date = new Date();
+    var tommorow = current_date.setDate(current_date.getDate() + 1);
+
     var datepickers = M.Datepicker.init(document.querySelectorAll('.datepicker'), {
         firstDay: 1,
         autoClose: true,
         format: 'dd mmmm yyyy',
-        onSelect: loadRanges,
+        minDate: new Date(tommorow),
+        onSelect: loadIntervals,
         i18n: {
             done: "OK",
             cancel: "Отмена",
