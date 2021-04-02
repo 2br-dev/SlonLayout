@@ -8980,8 +8980,14 @@ $jscomp.polyfill = function (e, r, p, m) {
       }
     }, {
       key: "setInputValue",
-      value: function setInputValue() {
-        this.el.value = this.toString();
+      value: function setInputValue() {;
+        // this.el.value = this.toString();
+        var selectedDate = new Date(this.date).toLocaleString('ru', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+      });
+      this.el.value = selectedDate;
         this.$el.trigger('change', { firedBy: this });
       }
     }, {
