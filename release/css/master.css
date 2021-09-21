@@ -4556,6 +4556,36 @@ body {
     min-width: 160px;
     line-height: 18px;
     margin: 10px auto; }
+  .card.product-action .header {
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: 700; }
+  .card.product-action .price-wrapper {
+    text-align: center;
+    display: inline-flex;
+    margin: auto; }
+    .card.product-action .price-wrapper .old-price {
+      text-decoration: line-through; }
+      .card.product-action .price-wrapper .old-price span {
+        display: inline-block;
+        padding: 0 10px;
+        line-height: 30px;
+        text-decoration: line-through;
+        transform: rotate(-8deg);
+        border: 2px dotted #80C342;
+        font-size: 16px;
+        font-weight: 700;
+        color: #80C342;
+        box-shadow: 0 0 0 2px #80C342 inset; }
+    .card.product-action .price-wrapper .price {
+      font-size: 28px;
+      font-weight: 700;
+      flex-grow: 1;
+      padding: 0 20px;
+      color: #e60c0c; }
   .card .kv-pair {
     padding: 0 20px; }
     .card .kv-pair.price .key {

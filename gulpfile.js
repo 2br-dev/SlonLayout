@@ -7,6 +7,7 @@ const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const order = require('gulp-order');
 const autoPrefixer = require('gulp-autoprefixer');
+const babel = require('gulp-babel');
 const browserSync = require('browser-sync').init({
 	server: {
 		baseDir: './release/'
@@ -39,7 +40,7 @@ gulp.task('html', function(){
 
 gulp.task('js', function(){
 	return gulp.src('./src/js/*.js')
-		// .pipe(uglify())
+		.pipe(uglify())
 		.pipe(order([
 			"jquery.lazy.js",
 			"materialize.js",
@@ -48,6 +49,9 @@ gulp.task('js', function(){
 			"master.js",
 			"brand.js"
 		]))
+		// .pipe(babel({
+		// 	presets: ["@babel/preset-env"]
+		// }))
 		.pipe(concat('master.js'))
 		.pipe(gulp.dest('./release/js/'))
 		.pipe(browserSync.stream());

@@ -117,6 +117,52 @@
         }
     }
 
+    &.product-action{
+
+        
+        & .header{
+            text-align: center;
+            width: 100%;
+            display: inline-block;
+            line-height: 40px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .price-wrapper{
+    
+            text-align: center;
+            display: inline-flex;
+            margin: auto;
+            
+            & .old-price{
+        
+                text-decoration: line-through;
+                
+                & span{
+                    display: inline-block;
+                    padding: 0 10px;
+                    line-height: 30px;
+                    text-decoration: line-through;
+                    transform: rotate(-8deg);
+                    border: 2px dotted $primary;
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: $primary;
+                    box-shadow: 0 0 0 2px $primary inset;
+                }
+            }
+            
+            & .price{
+                font-size: 28px;
+                font-weight: 700;
+                flex-grow: 1;
+                padding: 0 20px;
+                color: $critical;
+            }
+        }
+    }
+
     & .kv-pair{
         
         padding: 0 20px;

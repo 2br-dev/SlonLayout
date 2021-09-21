@@ -39,6 +39,12 @@
             <div class="price">@@price ₽</div>
             <div class="subheader">@@subheader</div>
         }
+        @@if(type=="action"){
+            <div class="price-wrapper">
+                <div class="old-price"><span>@@old_price  ₽</span></div>
+                <div class="price">@@price ₽</div>
+            </div>
+        }
         <div class="cart-wrapper">
             <div class="kv-pair card-footer">
                 <div class="key">

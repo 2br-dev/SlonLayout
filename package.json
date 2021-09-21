@@ -4,11 +4,12 @@
   "description": "Slon layout",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp watch"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/core": "^7.14.8",
     "browser-sync": "^2.26.14",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
@@ -17,5 +18,9 @@
     "gulp-order": "^1.2.0",
     "gulp-sass": "^4.1.0",
     "gulp-uglify": "^3.0.2"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.14.8",
+    "gulp-babel": "^8.0.0"
   }
 }
