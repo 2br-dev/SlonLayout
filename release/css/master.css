@@ -6041,6 +6041,44 @@ footer {
   background-position: center;
   background-repeat: no-repeat; }
 
+@media (max-width: 800px) {
+  #product .price-wrapper {
+    display: flex; }
+    #product .price-wrapper > * {
+      margin: 20px 0;
+      margin-right: 20px; } }
+
+#product .price-wrapper .old-price {
+  padding-bottom: 20px; }
+  #product .price-wrapper .old-price span {
+    display: block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 0 10px;
+    line-height: 36px;
+    font-size: 26px;
+    font-weight: bold;
+    box-shadow: 0 0 0 2px #80C342 inset;
+    color: #80C342;
+    transform: rotate(-9deg);
+    border: 2px dotted #80C342; }
+
+#product .price-wrapper .new-price {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content; }
+  #product .price-wrapper .new-price span {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 14px; }
+    #product .price-wrapper .new-price span.price {
+      color: #e60c0c;
+      font-size: 42px;
+      line-height: 48px;
+      font-weight: bold; }
+
 #product .color-selector {
   text-align: center;
   margin: 30px 0; }

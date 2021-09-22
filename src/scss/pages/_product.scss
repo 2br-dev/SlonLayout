@@ -7,6 +7,56 @@
         background-repeat: no-repeat;
     }
 
+    & .price-wrapper{
+
+        @media(max-width: $medium){
+            display: flex;
+
+            & > *{
+                margin: 20px 0;
+                margin-right: 20px;
+            }
+        }
+       
+        & .old-price{
+            
+            padding-bottom: 20px;
+            
+            & span{
+                display: block;
+                width: fit-content;
+                padding: 0 10px;
+                line-height: 36px;
+                font-size: 26px;
+                font-weight: bold;
+                box-shadow: 0 0 0 2px $primary inset;
+                color: $primary;
+                transform: rotate(-9deg);
+                border: 2px dotted $primary;
+            }
+        }
+        
+        & .new-price{
+            
+            width: fit-content;
+            
+            & span{
+                display: block;
+                font-size: 12px;
+                font-weight: bold;
+                line-height: 14px;
+                
+                &.price{
+                    
+                    color: $critical;
+                    font-size: 42px;
+                    line-height: 48px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
     & .color-selector{
         text-align: center;
         margin: 30px 0;
