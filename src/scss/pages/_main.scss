@@ -11,6 +11,81 @@
             @media(max-width: 600px){
                 height: 70vh;
             }
+
+            & #actions-wrapper{
+
+                margin-top: calc(80vh - 120px);
+                padding: 20px 0;
+                
+                & #actions-slider{
+                    
+                    box-sizing: border-box;
+                    box-shadow: 0 4px 0px 0px #80C342, 0 8px 12px rgba(black, .2);
+                    border-radius: 6px;
+                    position: relative;
+                    background: linear-gradient(to bottom, #fff, #F5F5F5);
+                    
+                    & .action-label{
+                            
+                        position: absolute;
+                        right: -26px;
+                        top: 10px;
+                        color: #fff;
+                        background: #80C342;
+                        width: 100px;
+                        text-align: center;
+                        transform: rotate(45deg);
+                        z-index: 20;
+                    }
+                        
+                    
+                    & .action-slide{
+                                    
+                        display: flex;
+                        align-items: center;
+                        overflow: hidden;
+                        
+                        & .action-image{
+                                            
+                            width: 140px;
+                            height: 140px;
+                            padding: 10px;
+                            
+                            & .lazy{
+                                width: 100%;
+                                height: 100%;
+                                background-size: cover;
+                            }
+                        }
+                        
+                        & .action-data{
+                            
+                            flex-grow: 1;
+                            padding: 20px;
+                            
+                            & .name{
+                                font-weight: 600;
+                                font-size: 21px;
+                            }
+                            
+                        }
+                    }
+                    & + .swiper-pagination{
+            
+                        left: 50%;
+                        transform: translate(-50%, 50px);
+                        
+                        & .swiper-pagination-bullet{
+                            margin: 0 20px;
+                            
+                            &.swiper-pagination-bullet-active{
+                                background: #80C342;
+                            }
+                        }
+                    }
+                }
+            }
+            
         }
     
         &#delivery{

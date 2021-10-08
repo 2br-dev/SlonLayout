@@ -1,5 +1,6 @@
 var miscSliders;
 var storedImage;
+var actionsSlider;
 var selectedDate;
 
 $(() => {
@@ -211,7 +212,7 @@ function initTooltip(){
 
 //= Общая инициализация ===================================================
 function init(){
-    $('.lazy-image').lazy();
+    $('.lazy-image, .lazy').lazy();
     initTooltip();
     $('.sidenav').sidenav();
     $('.modal').modal();
@@ -254,6 +255,18 @@ function init(){
             })
         });
     }
+
+    actionsSlider = new Swiper('#actions-slider', {
+        pagination: {
+            el: ".swiper-pagination",
+            type: "bullets",
+            clickable: true
+        },
+        loop: true,
+        autoplay: {
+            delay: 5000
+        }
+    });
 
     $('textarea').each(function () {
         this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;');

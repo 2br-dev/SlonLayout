@@ -7,6 +7,21 @@
     @@include('./parts/header.html')
     <div class="global-wrapper" id="main">
         <section id="hero" class="lazy-image" data-src="/img/hero-white.jpg">
+            <div class="container" id="actions-wrapper">
+                <div class="row">
+                    <div class="col l4 m6 s10 xs12 offset-l4 offset-m3 offset-s1">
+                        <div class="swiper-container" id="actions-slider">
+                            <div class="action-label">
+                                <span>Акция</span>
+                            </div>
+                            <div class="swiper-wrapper">
+                                @@loop('./parts/action-slide.html', './data/actions-banner.json')
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section id="water">
             <div class="container">
