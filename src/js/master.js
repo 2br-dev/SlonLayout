@@ -267,6 +267,9 @@ function init(){
             delay: 5000
         }
     });
+    actionsSlider.on('slideChange', () => {
+        $('.lazy, .lazy-image').lazy();
+    })
 
     $('textarea').each(function () {
         this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;');
