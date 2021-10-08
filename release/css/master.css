@@ -5884,9 +5884,15 @@ footer {
   @media (max-width: 600px) {
     #main section#hero {
       height: 70vh; } }
+  @media (max-width: 800px) {
+    #main section#hero {
+      margin-bottom: 300px; } }
   #main section#hero #actions-wrapper {
     margin-top: calc(80vh - 120px);
     padding: 20px 0; }
+    @media (max-width: 800px) {
+      #main section#hero #actions-wrapper {
+        margin-top: calc(60vh - 120px); } }
     #main section#hero #actions-wrapper #actions-slider {
       box-sizing: border-box;
       box-shadow: 0 4px 0px 0px #80C342, 0 8px 12px rgba(0, 0, 0, 0.2);
@@ -5907,6 +5913,9 @@ footer {
         display: flex;
         align-items: center;
         overflow: hidden; }
+        @media (max-width: 800px) {
+          #main section#hero #actions-wrapper #actions-slider .action-slide {
+            flex-direction: column; } }
         #main section#hero #actions-wrapper #actions-slider .action-slide .action-image {
           width: 140px;
           height: 140px;
@@ -5926,6 +5935,9 @@ footer {
         transform: translate(-50%, 50px); }
         #main section#hero #actions-wrapper #actions-slider + .swiper-pagination .swiper-pagination-bullet {
           margin: 0 20px; }
+          @media (max-width: 800px) {
+            #main section#hero #actions-wrapper #actions-slider + .swiper-pagination .swiper-pagination-bullet {
+              margin: 0 8px; } }
           #main section#hero #actions-wrapper #actions-slider + .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
             background: #80C342; }
 

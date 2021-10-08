@@ -12,9 +12,18 @@
                 height: 70vh;
             }
 
+            @media(max-width: $medium){
+                margin-bottom: 300px;
+            }
+
             & #actions-wrapper{
 
                 margin-top: calc(80vh - 120px);
+                
+                @media(max-width: $medium){
+                    margin-top: calc(60vh - 120px);
+                }
+
                 padding: 20px 0;
                 
                 & #actions-slider{
@@ -44,6 +53,10 @@
                         display: flex;
                         align-items: center;
                         overflow: hidden;
+
+                        @media(max-width: $medium){
+                            flex-direction: column;
+                        }
                         
                         & .action-image{
                                             
@@ -77,6 +90,10 @@
                         
                         & .swiper-pagination-bullet{
                             margin: 0 20px;
+
+                            @media(max-width: $medium){
+                                margin: 0 8px;
+                            }
                             
                             &.swiper-pagination-bullet-active{
                                 background: #80C342;
