@@ -5888,17 +5888,20 @@ footer {
     #main section#hero {
       margin-bottom: 300px; } }
   #main section#hero #actions-wrapper {
-    margin-top: calc(80vh - 120px);
+    margin-top: calc(80vh - 200px);
     padding: 20px 0; }
     @media (max-width: 800px) {
       #main section#hero #actions-wrapper {
-        margin-top: calc(60vh - 120px); } }
+        margin-top: calc(60vh - 150px); } }
     #main section#hero #actions-wrapper #actions-slider {
       box-sizing: border-box;
       box-shadow: 0 4px 0px 0px #80C342, 0 8px 12px rgba(0, 0, 0, 0.2);
       border-radius: 6px;
       position: relative;
-      background: linear-gradient(to bottom, #fff, #F5F5F5); }
+      background: linear-gradient(to bottom, #fff, #F5F5F5);
+      width: 600px;
+      margin: auto;
+      max-width: 100%; }
       #main section#hero #actions-wrapper #actions-slider .action-label {
         position: absolute;
         right: -26px;
@@ -5917,9 +5920,10 @@ footer {
           #main section#hero #actions-wrapper #actions-slider .action-slide {
             flex-direction: column; } }
         #main section#hero #actions-wrapper #actions-slider .action-slide .action-image {
-          width: 140px;
-          height: 140px;
-          padding: 10px; }
+          width: 180px;
+          height: 180px;
+          padding: 10px;
+          flex-shrink: 0; }
           #main section#hero #actions-wrapper #actions-slider .action-slide .action-image .lazy {
             width: 100%;
             height: 100%;
@@ -5932,7 +5936,7 @@ footer {
             font-size: 21px; }
       #main section#hero #actions-wrapper #actions-slider + .swiper-pagination {
         left: 50%;
-        transform: translate(-50%, 50px); }
+        transform: translate(-50%, 30px); }
         #main section#hero #actions-wrapper #actions-slider + .swiper-pagination .swiper-pagination-bullet {
           margin: 0 20px; }
           @media (max-width: 800px) {
