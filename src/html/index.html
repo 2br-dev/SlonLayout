@@ -6,19 +6,16 @@
 <body>
     @@include('./parts/header.html')
     <div class="global-wrapper" id="main">
-        <section id="hero" class="lazy-image" data-src="/img/hero-white.jpg">
-            <div class="container" id="actions-wrapper">
-                <div class="row">
-                    <div class="col s12">
-                        <div class="swiper-container" id="actions-slider">
-                            <div class="action-label">
-                                <span>Акция</span>
-                            </div>
-                            <div class="swiper-wrapper">
-                                @@loop('./parts/action-slide.html', './data/actions-banner.json')
-                            </div>
-                        </div>
-                        <div class="swiper-pagination"></div>
+        <section id="hero" class="lazy-image" data-src="/img/hero-actions-bgr.jpg">
+            <div class="container">
+                <div class="row flex">
+                    <div class="col l5 offset-xl1 text-content align-center-l-down">
+                        <h1><span class="big">Акции</span> <span class="name">лёгкий старт</span></h1>
+                        <p class="hero-descriptor">Выгодные предложения для первого заказа</p>
+                        <a href="/actions.html" class="btn">Больше акций</a>
+                    </div>
+                    <div class="col l5 m6 s12 image-data">
+                        <div class="lazy" data-src="/img/action1.png"></div>
                     </div>
                 </div>
             </div>
