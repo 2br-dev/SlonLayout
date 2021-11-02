@@ -21,12 +21,12 @@ header{
         & .logo{
             background-color: $primary;
             width: 96px;
-            height: 90px;
+            height: auto;
             background-position: bottom 20px center;
             background-repeat: no-repeat;
             
             @media(max-width: 900px){
-                height: 50px;
+                height: auto;
                 background-position: center;
                 background-size: 70% auto;
             }
@@ -48,7 +48,7 @@ header{
             & > ul{
                 display: flex;
                 
-                @media(min-width: 900px){
+                @media(min-width: 1100px){
                     margin: 0;
                 }
 
@@ -59,8 +59,11 @@ header{
 
                 &.menu{
                     flex-grow: 1;
-                    padding: 36px 20px 0;
+                    padding: 36px 20px 15px;
 
+                  @media (max-width: 1100px){
+                    padding-bottom: 0;
+                  }
                     & > li{
 
                         display: flex;
@@ -90,8 +93,10 @@ header{
                     padding-top: 36px;
                     padding-left: 20px;
                     color: $secondary;
-
-                    @media(max-width: 900px){
+                    & li {
+                      display: flex;
+                    }
+                    @media(max-width: 1100px){
                         padding-top: 0px;
                     }
 
@@ -108,7 +113,7 @@ header{
                     padding-top: 36px;
                     color: $secondary;
 
-                    @media(max-width: 900px){
+                    @media(max-width: 1100px){
                         padding-top: 0px;
                     }
 
@@ -284,7 +289,7 @@ header{
                     display: none;
                 }
 
-                @media(max-width: 900px){
+                @media(max-width: 1100px){
                     padding-top: 16px;
                 }
             }
