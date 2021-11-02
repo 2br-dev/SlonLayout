@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('./parts/head.html', {title: "Новости"})
+</head>
+<body>
+    @@include('./parts/header.html')
+    <div class="global-wrapper" id="news">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <h1>Новости</h1>
+                </div>
+                <div class="col l6 m12">
+                    <div class="news now">
+                        <a href="/news-page.html" class="news-image lazy" data-src="/img/news-image.jpg">
+                            <span class="news-title">Где в Крыму сегодня не будет воды из-за ремонтов</span>
+                            <span class="news-date">12 апреля 2012 г.</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col l6 m12">
+                    <div class="row news latest">
+                        <div class="col l6 m6 s12">
+                            <a href="/news-page.html" class="news-image lazy" data-src="/img/news-image.jpg">
+                                <span class="news-date">12 апреля 2012 г.</span>
+                            </a>
+                        </div>
+                        <div class="col l6 m6 s12">
+                            <a href="/news-page.html" class="news-title">Где в Крыму сегодня не будет воды из-за ремонтов</a>
+                            <div class="news-intro">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur incidunt tenetur inventore odit harum. Quis?
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row news latest">
+                        <div class="col l6 m6 s12">
+                            <a href="/news-page.html" class="news-image lazy" data-src="/img/news-image.jpg">
+                                <span class="news-date">12 апреля 2012 г.</span>
+                            </a>
+                        </div>
+                        <div class="col l6 m6 s12">
+                            <a href="/news-page.html" class="news-title">Где в Крыму сегодня не будет воды из-за ремонтов</a>
+                            <div class="news-intro">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur incidunt tenetur inventore odit harum. Quis?
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <h2>Более ранние новости</h2>
+                </div>
+            </div>
+            <div class="row">
+                @@loop('./parts/news-entry.html', './data/news.json')
+            </div>
+        </div>
+    </div>
+    @@include('./parts/footer.html')
+    @@include('./parts/scripts.html')
+</body>
+</html>
