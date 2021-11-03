@@ -6664,7 +6664,8 @@ footer {
   flex-direction: column; }
   #news .news-content .news-title, #news-page .news-content .news-title {
     font-weight: 500;
-    font-size: 32px; }
+    font-size: 32px;
+    margin-top: 40px; }
   #news .news-content .separator, #news .news-content .news-body, #news-page .news-content .separator, #news-page .news-content .news-body {
     flex-grow: 1; }
 
@@ -6738,4 +6739,12 @@ footer {
     padding: 0 10px;
     font-size: 12px;
     color: #fff;
-    background: #000; }
+    background: linear-gradient(11deg, transparent 40%, rgba(0, 0, 0, 0.7)); }
+
+#news .gallery-image, #news-page .gallery-image {
+  padding-bottom: 70%;
+  background-size: cover;
+  margin-bottom: 1.5rem; }
+
+#news .news-body, #news-page .news-body {
+  margin-bottom: 60px; }

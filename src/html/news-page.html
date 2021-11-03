@@ -12,8 +12,8 @@
                     <h1>Новости</h1>
                 </div>
             </div>
-            <div class="row flex">
-                <div class="col l6 m12">
+            <div class="row flex news-body">
+                <div class="col l6 m8 s12">
                     <div class="main-image lazy" data-src="/img/cooler-service.jpg"></div>
                 </div>
                 <div class="col l6 m12 news-content">
@@ -24,6 +24,29 @@
                         <p>За­казать ус­лу­гу по починке кулера и по­лучить кон­суль­та­цию по ремонту мож­но по те­лефо­ну:  204-44-44. Наш ме­нед­жер быс­тро при­мет вашу за­яв­ку, и уже в бли­жай­шее вре­мя мы отремонтируем ваш кулер. На­поми­на­ем, что мы ра­бота­ем без вы­ход­ных и праз­днич­ных дней. За­яв­ки принимаем круг­ло­суточ­но.</p>
                     </div>
                     <div class="date">12 апреля 2012 г.</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col m6">
+                    <div class="row">
+                        <div class="col s12">
+                            <h2>Галерея</h2>
+                        </div>
+                        <div class="col l6 m12 s12">
+                            <div class="gallery-image materialboxed lazy" data-src="/img/news-image.jpg"></div>
+                        </div>
+                        <div class="col l6 m12 s12">
+                            <div class="gallery-image materialboxed lazy" data-src="/img/news-image.jpg"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col m6">
+                    <div class="row">
+                        <div class="col s12">
+                            <h2>Прикреплённые товары</h2>
+                        </div>
+                        @@loop('./parts/card.html', './data/pomps2.json')
+                    </div>
                 </div>
             </div>
             <div class="row">

@@ -12,6 +12,7 @@
         & .news-title{
             font-weight: 500;
             font-size: 32px;
+            margin-top: 40px;
         }
 
         & .separator, & .news-body{
@@ -122,5 +123,15 @@
                 background: #000;
             }
         }
+    }
+
+    & .gallery-image{
+        padding-bottom: 70%;
+        background-size: cover;
+        margin-bottom: 1.5rem;
+    }
+
+    & .news-body{
+        margin-bottom: 60px;
     }
 }
