@@ -1,0 +1,20 @@
+[
+    {
+        "image": "/img/pomp.png",
+        "title": "Помпа электрическая",
+        "type": "pomp",
+        "price": 7200,
+        "subheader": "Помпа электрическая AWD&nbsp;4.1",
+        "wrapper": "col s12 m12 l6",
+        "link": "/product-pomp.html"
+    },
+    {
+        "image": "/img/pomp.png",
+        "title": "Помпа электрическая",
+        "type": "pomp",
+        "price": 7200,
+        "subheader": "Помпа электрическая AWD&nbsp;4.1",
+        "wrapper": "col s12 m12 l6",
+        "link": "/product-pomp.html"
+    }
+]

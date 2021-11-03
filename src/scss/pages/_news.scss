@@ -98,7 +98,8 @@
             display: block;
             position: relative;
             padding-bottom: 70%;
-            background-size: contain;
+            background-size: cover;
+            background-position: center center;
 
             &:before{
                 content: '';

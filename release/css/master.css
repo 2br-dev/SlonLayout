@@ -6720,7 +6720,8 @@ footer {
   display: block;
   position: relative;
   padding-bottom: 70%;
-  background-size: contain; }
+  background-size: cover;
+  background-position: center center; }
   #news .news .news-image:before, #news-page .news .news-image:before {
     content: '';
     display: block;
@@ -6739,7 +6740,7 @@ footer {
     padding: 0 10px;
     font-size: 12px;
     color: #fff;
-    background: linear-gradient(11deg, transparent 40%, rgba(0, 0, 0, 0.7)); }
+    background: #000; }
 
 #news .gallery-image, #news-page .gallery-image {
   padding-bottom: 70%;
