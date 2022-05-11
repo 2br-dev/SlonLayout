@@ -9,6 +9,21 @@
     display: flex;
     flex-direction: column;
 
+    & .affilial{
+        display: flex;
+        background: linear-gradient(to bottom, darken(#ccc, 10), #ccc 10%);
+
+        & a{
+            width: 50%;
+            text-align: center;
+
+            &.active{
+                background: linear-gradient(to bottom, $primary, darken($primary, 10));
+                color: #fff;
+            }
+        }
+    }
+
     & .separator{
         flex-grow: 1;
     }

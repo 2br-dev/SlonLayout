@@ -4149,6 +4149,7 @@ button.swiper-pagination-bullet {
 
 header {
   position: sticky;
+  position: -webkit-sticky;
   position: -moz-sticky;
   position: -ms-sticky;
   position: -o-sticky;
@@ -4161,17 +4162,76 @@ header {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); }
   header .header-wrapper {
     display: flex; }
-    header .header-wrapper .logo {
-      background-color: #80C342;
-      width: 96px;
-      height: auto;
-      background-position: bottom 20px center;
-      background-repeat: no-repeat; }
-      @media (max-width: 900px) {
-        header .header-wrapper .logo {
-          height: auto;
-          background-position: center;
-          background-size: 70% auto; } }
+    header .header-wrapper .logo-wrapper {
+      flex-shrink: 0;
+      flex-shrink: 0;
+      display: flex;
+      position: relative;
+      align-items: center; }
+      header .header-wrapper .logo-wrapper .logo {
+        background-color: #80C342;
+        background-position: bottom 20px center;
+        background-repeat: no-repeat;
+        display: block;
+        width: 90px;
+        flex-shrink: 0;
+        height: 100%; }
+        @media (max-width: 900px) {
+          header .header-wrapper .logo-wrapper .logo {
+            background-position: center;
+            background-size: 70% auto; } }
+      header .header-wrapper .logo-wrapper .affiliate-selector {
+        margin: 0;
+        position: absolute;
+        left: calc(100% + 20px);
+        border-bottom: 1px solid #80C342;
+        top: 12px;
+        width: 200px;
+        z-index: 90; }
+        header .header-wrapper .logo-wrapper .affiliate-selector > li {
+          position: relative; }
+          header .header-wrapper .logo-wrapper .affiliate-selector > li a {
+            color: #80C342;
+            display: flex; }
+          header .header-wrapper .logo-wrapper .affiliate-selector > li ul {
+            position: absolute;
+            background: #fff;
+            width: 100%;
+            transform: translateY(-20px);
+            transition: transform .2s, opacity .2s;
+            pointer-events: none;
+            opacity: 0;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); }
+            header .header-wrapper .logo-wrapper .affiliate-selector > li ul li a {
+              background: #fff;
+              display: block;
+              line-height: 2.2em;
+              padding: 0 10px;
+              transition: background-color .2s; }
+              header .header-wrapper .logo-wrapper .affiliate-selector > li ul li a:hover {
+                background: #efefef; }
+          header .header-wrapper .logo-wrapper .affiliate-selector > li:hover ul {
+            opacity: 1;
+            pointer-events: all;
+            transform: none; }
+        @media (max-width: 1100px) {
+          header .header-wrapper .logo-wrapper .affiliate-selector {
+            width: 140px;
+            border-bottom: 0;
+            position: relative;
+            left: unset;
+            padding: 0 10px;
+            top: 0; }
+            header .header-wrapper .logo-wrapper .affiliate-selector li {
+              padding: 0;
+              line-height: 1em; }
+              header .header-wrapper .logo-wrapper .affiliate-selector li a {
+                line-height: 1em; } }
+        @media (max-width: 600px) {
+          header .header-wrapper .logo-wrapper .affiliate-selector {
+            display: none; } }
     header .header-wrapper .logo-separator {
       flex-grow: 1; }
       @media (min-width: 1101px) {
@@ -4215,7 +4275,7 @@ header {
           @media (max-width: 1100px) {
             header .header-wrapper nav > ul.phones {
               padding-top: 0px; } }
-          @media (max-width: 700px) {
+          @media (max-width: 800px) {
             header .header-wrapper nav > ul.phones {
               display: none; } }
         header .header-wrapper nav > ul .nav-icon {
@@ -6035,6 +6095,15 @@ footer {
     padding-top: 40%;
     background-size: cover;
     background-position: center; }
+  .sidenav .affilial {
+    display: flex;
+    background: linear-gradient(to bottom, #b3b3b3, #ccc 10%); }
+    .sidenav .affilial a {
+      width: 50%;
+      text-align: center; }
+      .sidenav .affilial a.active {
+        background: linear-gradient(to bottom, #80C342, #679f33);
+        color: #fff; }
   .sidenav .separator {
     flex-grow: 1; }
   .sidenav .folder {
@@ -6257,6 +6326,7 @@ footer {
 
 @media (min-width: 800px) {
   .filters-wrapper {
+    position: -webkit-sticky;
     position: sticky;
     top: 120px; } }
 
@@ -6641,6 +6711,7 @@ footer {
     #compare .compare-table-wrapper tr td.char, #compare .compare-table-wrapper tr th.char {
       position: relative;
       position: sticky;
+      position: -webkit-sticky;
       position: -moz-sticky;
       left: 0;
       z-index: 3;
