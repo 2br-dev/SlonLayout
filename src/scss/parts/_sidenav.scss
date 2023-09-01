@@ -11,11 +11,17 @@
 
     & .affilial{
         display: flex;
+        flex-wrap: wrap;
         background: linear-gradient(to bottom, darken(#ccc, 10), #ccc 10%);
+        line-height: unset;
 
         & a{
-            width: 50%;
+            min-width: 50%;
             text-align: center;
+            padding: 10px;
+            line-height: unset !important;
+            flex-grow: 1;
+            border-bottom: 1px solid #aaa;
 
             &.active{
                 background: linear-gradient(to bottom, $primary, darken($primary, 10));

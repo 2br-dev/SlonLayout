@@ -21,6 +21,32 @@ body{
         }
     }
 
+    & .alert{
+
+        border: 1px solid;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border-radius: 4px;
+        color: $primary;
+        background-color: rgba($primary, .05);
+        box-shadow: 0 1px 3px rgba(black, .4);
+        margin: 1vmax 0;
+
+        & i{
+            font-size: 32px;
+            margin-right: 20px;
+        }
+
+        & p{
+            margin: 0;
+        }
+
+        &.info{
+            border-color: $primary;
+        }
+    }
+
     & .swiper-button-prev{
         top: 0;
         left: -5px;

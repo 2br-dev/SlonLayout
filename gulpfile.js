@@ -1,7 +1,10 @@
 'use strict';
  
 const gulp = require('gulp');
-const sass = require('gulp-sass');
+
+const gulp_sass = require('gulp-sass');
+const node_sass = require('sass');
+const sass = gulp_sass(node_sass);
 const include = require('gulp-file-include');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
