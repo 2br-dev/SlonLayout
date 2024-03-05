@@ -1,0 +1,79 @@
+@import '../parts/vars';
+
+.global-wrapper#requisites{
+
+	& h2{
+		color: $text;
+	}
+
+	& .kv-pair{
+		padding: clamp(5px, 2vw, 10px);
+
+		&:nth-child(odd){
+			background-color: rgba(black, .05);
+		}
+
+		& ul{
+			padding-left: 1em;
+		}
+
+		@media(max-width: $medium){
+
+			flex-direction: column;
+
+			& .key, & .value{
+				width: 100%;
+			}
+
+			& .key{
+				font-size: 14px;
+				width: fit-content;
+				border-bottom: 1px solid #ccc;
+				margin-bottom: 10px;
+			}
+
+			& .value{
+				font-size: 18px;
+			}
+
+			&:nth-child(odd){
+				background-color: transparent;
+			}
+		}
+	}
+}
+
+@media print{
+
+	header, footer{
+		display: none;
+	}
+
+	.global-wrapper#requisites{
+
+		print-color-adjust: exact !important;
+
+		& img, & .btn{
+			display: none !important;
+		}
+	
+		& .kv-pair{
+
+			flex-direction: row;
+
+			&:nth-child(odd){
+				background-color: rgba(black, .05);
+			}
+
+			& .key{
+				width: 40%;
+				padding-right: 30px;
+			}
+
+			& .key, & .value{
+				font-size: 16px;
+				border: 0;
+			}
+		}
+	}
+}
