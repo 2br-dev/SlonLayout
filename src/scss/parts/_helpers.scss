@@ -9,6 +9,10 @@ body{
     display: flex;
     flex-direction: column;
 
+    & .margin-bottom{
+        margin-bottom: $gutter-width;
+    }
+
     & .global-wrapper{
         flex-grow: 1;
         padding-bottom: 50px;

@@ -50,6 +50,7 @@
 	$i: 1;
 
 	@while($i <=$cols) {
+		
 		$perc: unquote((100 / ($cols / $i)) + "%");
 
 		&.#{$class}#{$i} {
@@ -81,7 +82,6 @@
 	}
 }
 
-
 .row {
 	margin-left: auto;
 	margin-right: auto;
@@ -90,10 +90,15 @@
 	&.flex{
 		display: flex;
 		flex-wrap: wrap;
+		clear: both;
 
 		& > .col{
 			float: none;
 		}
+	}
+
+	&.vcenter{
+		align-items: center;
 	}
 
 	// Clear floating children
@@ -156,9 +161,9 @@
 }
 
 @mixin hide($class, $min, $max){
-	.hide-#{$class}-down{@media(max-width: $min){display: none;}}
-	.hide-#{$class}-up{@media(min-width: $min){display: none;}}
-	.hide-#{$class}-only{@media(min-width: $min) and (max-width: $max){display: none;}}
+	.hide-#{$class}-down{@media(max-width: $min){display: none !important;}}
+	.hide-#{$class}-up{@media(min-width: $min){display: none !important;}}
+	.hide-#{$class}-only{@media(min-width: $min) and (max-width: $max){display: none !important;}}
 }
 
 @mixin left($class, $min, $max){
@@ -189,6 +194,14 @@
 	.align-#{$direction}-#{$class}{@media(min-width: $min){text-align: #{$direction};}}
 }
 
+@mixin order($class, $media, $orderNum){
+	.order-#{$class}#{$orderNum}{
+		@media(max-width: $media){
+			order: $orderNum;
+		}
+	}
+}
+
 // Hide
 @include hide(s, $small, $medium);
 @include hide(m, $medium, $large);
@@ -212,3 +225,14 @@
 @include alignFrom(left, h, $huge);
 @include alignFrom(center, h, $huge);
 @include alignFrom(right, h, $huge);
+
+// Order
+$medias: ( $extra-small, $small, $medium, $large, $extra-large );
+$classes: ( 'xs', 's', 'm', 'l', 'xl' );
+
+@for $z from 1 to length($medias){
+	
+	@for $i from 1 to $cols{
+		@include order(nth($classes, $z), nth($medias, $z), $i);
+	}
+}

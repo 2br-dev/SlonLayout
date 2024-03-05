@@ -1,0 +1,99 @@
+
+.global-wrapper#payment-delivery{
+
+	& section{
+
+		&#hero{
+
+			& img{
+				width: 100%;
+				border-radius: clamp(6px, 2vw, 12px);
+				min-height: 400px;
+				object-fit: cover;
+			}
+		}
+
+		&#payment{
+
+			& .payment-card{
+
+				background-color: #FBFBFB;
+				border-radius: clamp(4px, 2vw, 6px);
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				overflow: hidden;
+
+				& .card-content{
+
+					flex-grow: 1;
+					padding: clamp(5px, 2vw, 20px);
+					display: flex;
+
+					@media(max-width: $small){
+						flex-direction: column;
+					}
+
+					& .card-icon{
+						width: 86px;
+						flex-shrink: 0;
+						padding-right: 20px;
+						box-sizing: border-box;
+					}
+				}
+				
+				& .card-footer{
+					padding: clamp(5px, 2vw, 20px);
+					box-sizing: border-box;
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					background-color: #F0F0F0;
+					flex-wrap: wrap;
+
+					& span{
+						display: block;
+					}
+
+					& img{
+						width: 20%;
+						max-height: 36px;
+
+						@media(max-width: $extra-small){
+							
+							width: calc(30% - 20px);
+							margin: 10px;
+
+							&:first-of-type{
+								width: 100%;
+							}
+						}
+					}
+				}
+			}
+
+			& .container > .row:first-of-type{
+				margin-bottom: 4vmax;
+			}
+
+			& .warning{
+				border: 1px solid $critical;
+				padding: clamp(5px, 2vw, 20px);
+				background-color: rgba($critical, .05);
+				border-radius: clamp(4px, 3vw, 6px);
+
+				& strong{
+					font-weight: 700;
+				}
+			}
+		}
+
+		&#info{
+			color: #fff;
+			font-size: clamp(18px, 3vw, 21px);
+			line-height: 1.4em;
+			padding: 4vmax 0;
+			background-position: center center;
+		}
+	}
+}
